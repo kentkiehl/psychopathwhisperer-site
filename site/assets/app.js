@@ -29,7 +29,7 @@ window.PW = (function () {
   // picture for a news item: the photo when the post has one, otherwise an illustrated panel in the site's own design
   const GLYPH = { press: "❡", tv: "▶", podcast: "◉", interview: "❝", talk: "✦", award: "★", book: "❦", essay: "✎" };
   function thumb(p) {
-    return `<div class="thumb art-${esc(p.kind || "press")}"><div class="tile-art"><span class="g">${GLYPH[p.kind] || "❡"}</span><span class="s">${esc(p.source || kind(p.kind))}</span></div>${p.image ? `<img src="assets/img/${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>`;
+    return `<div class="thumb art-${esc(p.kind || "press")}"><div class="tile-art"><span class="g">${GLYPH[p.kind] || "❡"}</span><span class="s">${esc(p.source || kind(p.kind))}</span></div>${p.image ? `<img src="assets/img/${esc(p.image)}" alt="" loading="lazy" onload="if(this.naturalWidth/this.naturalHeight>2.1)this.style.objectFit='contain'" onerror="this.remove()">` : ""}</div>`;
   }
 
   // one entry on the Top science / Top books pages

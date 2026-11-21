@@ -1,22 +1,22 @@
 [
  {
   "img": "007.jpg",
+  "label": "The paralimbic system",
+  "caption": "The regions that make up the paralimbic system of the brain."
+ },
+ {
+  "img": "006.jpg",
   "label": "Figure 6, page 167",
   "caption": "Summary of the brain regions believed to be implicated in psychopaths by the year 2000. Regions include the amygdala, hippocampal complex, anterior and posterior cingulate, anterior temporal pole, and the orbital frontal cortex. The numbers represent different areas of the brain as defined by the work of Dr. Brodmann."
  },
  {
-  "img": "006.jpg",
+  "img": "008.jpg",
   "label": "Figure 8, page 213",
   "caption": "Results from the first structural MRI analyses of criminal psychopaths collected on the mobile MRI system. The colored regions depict areas of the brain that are atrophied in adult male criminal psychopaths. The areas represent the majority of the paralimbic system of the brain."
  },
  {
-  "img": "008.jpg",
+  "img": "009.jpg",
   "label": "Figure 9, page 215",
   "caption": "Results from the first structural MRI analyses of incarcerated youth collected on the mobile MRI system (left image). The colored regions depict areas of the brain that are atrophied in youth with elevated callous/unemotional traits. The results from adult males (right image) are shown for comparison. The results from the two groups are strikingly similar: in both, the majority of the paralimbic system shows reduced gray matter density, or atrophy."
- },
- {
-  "img": "009.jpg",
-  "label": "Additional figure",
-  "caption": ""
  }
 ]

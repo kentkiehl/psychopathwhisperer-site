@@ -34,6 +34,8 @@ own styles are in `site/assets/site.css`.
   `image_source` in `data/news_posts.json`, copied from the archive by `scripts/import_archive_images.py`). Exception: the
   DVD cover on "The Story of God with Morgan Freeman" is not reused (a photo of a public figure). Items without a picture,
   including all the newer ones, show an illustrated panel in the site's own design; the owner can supply photos (set `image`).
+- Figures page: on the old page each caption sat ABOVE its image, so Figure 6 = 006.jpg, Figure 8 = 008.jpg, Figure 9 = 009.jpg;
+  007.jpg (the paralimbic system) had no caption and was given a short one.
 - Do NOT include any media from The Guardian (owner's instruction, 21 Nov 2026). None is on the site.
 - Merchandise: the old CafePress shop is gone (404). `site/merchandise.html` is a shop page driven by `data/merch.json`
   (mug, T-shirt, teddy bear, drawn as original illustrations); products show "Coming soon" until `shop_url`/`buy_url` are set.
