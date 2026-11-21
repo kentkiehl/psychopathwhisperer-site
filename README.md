@@ -1,7 +1,7 @@
 # The Psychopath Whisperer website
 
 Website for *The Psychopath Whisperer: The Science of Those Without Conscience* by Kent A. Kiehl, PhD, and for news and
-rankings in the science of psychopathy. Planned address: **https://psychopathwhisperer.com**. Not published yet.
+rankings in the science of psychopathy. Address: **https://psychopathwhisperer.com** (GitHub Pages; test address https://kentkiehl.github.io/psychopathwhisperer-site).
 
 It uses the same open-source framework as the [Kiehl Lab site](https://github.com/kentkiehl/kiehl-site) (built by Tor Wager
 for the CANlab and Jakubzick Lab sites): a static site with plain JSON data and an automated update job. Content was

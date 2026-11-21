@@ -6,9 +6,13 @@ README for the shared design system). `site/assets/app.css` is an unmodified cop
 own styles are in `site/assets/site.css`.
 
 ## Decisions
-- NOT PUBLISHED. The owner asked for a private preview first: no GitHub repository, no Pages, no DNS change and no change at
-  Bluehost until he says so. There is deliberately no `site/CNAME`. See README "Publishing" for the order of steps;
-  email for the domain runs through Google, so the MX and TXT records must be left alone when DNS is changed.
+- PUBLISHED 21 Nov 2026 on the owner's instruction: repository github.com/kentkiehl/psychopathwhisperer-site, GitHub Pages
+  (source: GitHub Actions), custom domain psychopathwhisperer.com. DNS is at Bluehost (ns1/ns2.bluehost.com): only the `@` A
+  record (was 162.241.216.188, the Bluehost server) and the `www` CNAME (was psychopathwhisperer.com) were changed, to GitHub
+  Pages. All mail records (MX -> mail.psychopathwhisperer.com at Bluehost, the `mail` A record, SPF) were left alone. To roll
+  back, put those two records back. The WordPress site and its files are still on the Bluehost server.
+- Google Scholar refuses requests from GitHub's servers (first monthly run, 21 Nov 2026: 0 of 9 profiles read), so the
+  Scholar figures only change when someone re-reads them in a browser; NIH RePORTER and OpenAlex refresh fine from GitHub.
 - The old site is archived in `Documents/psychopathwhisperer-archive-2026-11-21` (public pages, posts, media, WordPress JSON).
 - Pages follow the old menu: The book (about, reviews and praise, figures) · News · Top science (works, scientists, books) ·
   Blog · Awards · Merchandise · Donate · About.
@@ -21,8 +25,7 @@ own styles are in `site/assets/site.css`.
   pointed at another person's profile and was dropped. Profiles for Viding, Kimonis and Glenn were found by name search.
 - Top science and Top books: Google Scholar counts re-read on 21 Nov 2026 (the old page's were from March 2014 and are kept
   as `scholar_2014` for comparison). Per-work Scholar counts cannot be fetched automatically, so the monthly job adds an
-  OpenAlex count by DOI instead. The DOIs in `data/works.json` were entered from memory and are confirmed only once the
-  first monthly run resolves them.
+  OpenAlex count by DOI instead. All seven DOIs in `data/works.json` resolved in OpenAlex on the first run.
 - About page rewritten from the CV of November 2026 (30+ years, >280 papers, 6,000+ people scanned, 2026 Hare award).
 - Donate links to mrn.org/donate, as on the lab site (the old page used a Network for Good form).
 - NIH grants on Top scientists (owner's request): from NIH RePORTER, counting awards on which the scientist is PI or one of
