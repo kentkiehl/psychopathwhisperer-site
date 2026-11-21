@@ -7,7 +7,9 @@
 2. Top science (data/works.json): adds an OpenAlex citation count for every work that has a DOI. Google Scholar has no
    interface for per-paper counts, so the Scholar numbers on that page are dated snapshots, updated by hand
    (or by asking Claude to re-read them).
-3. Appends one line per run to data/metrics_history.json.
+3. NIH grants (data/scientists.json): asks NIH RePORTER's public API for the grants on which each scientist is PI or one of
+   multiple PIs (see pipeline/nih.py for what is counted). Scientists without a RePORTER profile id are skipped.
+4. Appends one line per run to data/metrics_history.json.
 
     python3 -m pipeline.update_metrics [--dry-run]
 """
@@ -16,7 +18,7 @@ import re
 import sys
 import time
 import requests
-from . import config
+from . import config, nih
 
 UA = f"{config.TOOL_NAME}/1.0 (monthly citation refresh for {config.SITE_URL}; {config.CONTACT_EMAIL or 'no contact set'})"
 SCHOLAR = "https://scholar.google.com/citations?hl=en&user={}"
@@ -64,6 +66,30 @@ def update_scientists(today):
     return path, d, ok, failed
 
 
+def update_nih(d, today):
+    """Refresh the "nih" block of every scientist that has RePORTER profile ids. Works on the dict from update_scientists."""
+    ok, failed = 0, []
+    for s in d["scientists"]:
+        ids = (s.get("nih") or {}).get("profile_ids") or []
+        if not ids:
+            continue
+        try:
+            new = nih.summarize(nih.fetch(ids, UA), ids, today)
+        except (requests.RequestException, KeyError, ValueError) as e:
+            failed.append(s["name"])
+            print(f"  {s['name']}: RePORTER lookup failed ({e}); keeping the figures of {s['nih'].get('as_of')}")
+            continue
+        # a grant never disappears from RePORTER: fewer than before means a bad response, so keep the old figures
+        if new["grants"] >= s["nih"].get("grants", 0):
+            s["nih"] = new
+            ok += 1
+            print(f"  {s['name']}: {new['grants']} grants as PI/MPI ({new['r01']} R01, {new['active']} active)")
+        else:
+            failed.append(s["name"])
+            print(f"  {s['name']}: RePORTER returned fewer grants than before; keeping the figures of {s['nih'].get('as_of')}")
+    return ok, failed
+
+
 def update_works(today):
     path = config.DATA / "works.json"
     d = json.loads(path.read_text(encoding="utf-8"))
@@ -89,13 +115,15 @@ def main():
     today = time.strftime("%Y-%m-%d")
     print("Google Scholar profiles:")
     sp, sd, s_ok, s_failed = update_scientists(today)
+    print("NIH RePORTER grants as PI or MPI:")
+    n_ok, n_failed = update_nih(sd, today)
     print("OpenAlex counts for works with a DOI:")
     wp, wd, w_ok, w_failed = update_works(today)
     hist_path = config.DATA / "metrics_history.json"
     hist = json.loads(hist_path.read_text(encoding="utf-8")) if hist_path.exists() else []
-    hist.append({"date": today, "scholar_profiles_read": s_ok, "scholar_profiles_failed": s_failed, "openalex_works_read": w_ok,
-                 "scientists": {s["id"]: [s["scholar"]["citations"], s["scholar"]["h_index"], s["scholar"]["as_of"]] for s in sd["scientists"]}})
-    print(f"scientists refreshed: {s_ok}/{len(sd['scientists'])}; works refreshed: {w_ok}")
+    hist.append({"date": today, "scholar_profiles_read": s_ok, "scholar_profiles_failed": s_failed, "openalex_works_read": w_ok, "nih_read": n_ok, "nih_failed": n_failed,
+                 "scientists": {s["id"]: [s["scholar"]["citations"], s["scholar"]["h_index"], s["scholar"]["as_of"], (s.get("nih") or {}).get("grants")] for s in sd["scientists"]}})
+    print(f"Scholar profiles refreshed: {s_ok}/{len(sd['scientists'])}; NIH refreshed: {n_ok}; works refreshed: {w_ok}")
     if not dry:
         for p, obj in ((sp, sd), (wp, wd), (hist_path, hist)):
             p.write_text(json.dumps(obj, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")

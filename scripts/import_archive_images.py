@@ -2,9 +2,9 @@
 
     python3 scripts/import_archive_images.py ../psychopathwhisperer-archive-2026-11-21
 
-Takes the archive folder (the one that contains media/2014/03/007.jpg and so on). Only the owner's own material is
-copied: the color figures from the book, the book cover and the merchandise picture. Outlet logos and photos of other
-people in the archive are not used on the new site.
+Takes the archive folder (the one that contains media/2014/03/007.jpg and so on). Copies the color figures from the
+book, the book cover, the merchandise picture, and the picture each news post had on the old site (the "image_source"
+of each entry in data/news_posts.json, saved under site/assets/img/news/).
 """
 import shutil, sys
 from pathlib import Path
@@ -20,6 +20,10 @@ WANTED = {
 }
 if len(sys.argv) != 2:
     sys.exit(__doc__)
+import json
+for post in json.loads((ROOT / "data" / "news_posts.json").read_text(encoding="utf-8")):
+    if post.get("image_source"):
+        WANTED[post["image_source"]] = post["image"]
 src = Path(sys.argv[1])
 for a, b in WANTED.items():
     if (src / a).exists():

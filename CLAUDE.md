@@ -25,8 +25,21 @@ own styles are in `site/assets/site.css`.
   first monthly run resolves them.
 - About page rewritten from the CV of November 2026 (30+ years, >280 papers, 6,000+ people scanned, 2026 Hare award).
 - Donate links to mrn.org/donate, as on the lab site (the old page used a Network for Good form).
-- Images: only the owner's own material is used (book figures, cover, merchandise picture, his portrait). Outlet logos,
-  Scholar screenshots and photos of other scientists from the old site are not reused. Do not download photos of people.
+- NIH grants on Top scientists (owner's request): from NIH RePORTER, counting awards on which the scientist is PI or one of
+  multiple PIs; one award per core project number; subprojects and intramural (Z) projects are not counted as grants. Matched
+  by RePORTER profile ids in `data/scientists.json` (found by name search on 21 Nov 2026 and checked against institution and
+  project titles; Dr. Blair has five profile ids). Hare, Viding and Kimonis have no RePORTER profile. Award amounts are not
+  shown (the lab site does not publish grant dollar totals). See `pipeline/nih.py`.
+- News pictures (owner's request): every carried-over post keeps the picture it had on the old site (`image` /
+  `image_source` in `data/news_posts.json`, copied from the archive by `scripts/import_archive_images.py`). Exception: the
+  DVD cover on "The Story of God with Morgan Freeman" is not reused (a photo of a public figure). Items without a picture,
+  including all the newer ones, show an illustrated panel in the site's own design; the owner can supply photos (set `image`).
+- Do NOT include any media from The Guardian (owner's instruction, 21 Nov 2026). None is on the site.
+- Merchandise: the old CafePress shop is gone (404). `site/merchandise.html` is a shop page driven by `data/merch.json`
+  (mug, T-shirt, teddy bear, drawn as original illustrations); products show "Coming soon" until `shop_url`/`buy_url` are set.
+  A static site cannot take payments itself; a storefront account (the owner's choice) is needed.
+- Other images: the book figures, cover, merchandise picture and the owner's portrait. Scholar screenshots and photos of
+  other scientists from the old site are not reused. Do not download photos of people from the web.
 - Not checked yet: the old external links (CafePress shop, Twitter, Facebook, scientists' faculty pages, older news links).
 
 ## Working

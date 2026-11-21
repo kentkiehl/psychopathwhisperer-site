@@ -1,7 +1,7 @@
 """Build the static site's data files from data/ into site/.
 
 Outputs:
-  site/data/*.json   copied from data/ (news_posts, scientists, works, praise, figures)
+  site/data/*.json   copied from data/ (news_posts, scientists, works, praise, figures, merch)
   site/feed.xml      RSS of the news posts
   site/sitemap.xml, site/robots.txt
 
@@ -15,7 +15,7 @@ from email.utils import formatdate
 from xml.sax.saxutils import escape
 from . import config
 
-COPIED = ["news_posts.json", "scientists.json", "works.json", "praise.json", "figures.json"]
+COPIED = ["news_posts.json", "scientists.json", "works.json", "praise.json", "figures.json", "merch.json"]
 
 
 def sort_key(d):

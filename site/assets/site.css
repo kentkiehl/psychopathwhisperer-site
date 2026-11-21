@@ -22,3 +22,16 @@ a.btn, p a.btn, li a.btn { text-decoration: none; }
 .darkstrip .eyebrow { color: #f0a3a8; } .darkstrip .eyebrow::before { background: #f0a3a8; }
 .darkstrip h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .tabs button.on { color: #fff; }
+/* news pictures: photo over an illustrated panel (the panel shows when a post has no photo) */
+.thumb { position: relative; overflow: hidden; background: #1a2332; border-radius: 10px; aspect-ratio: 16 / 10; }
+.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #fff; }
+.tile-art { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: .35rem; padding: .8rem; text-align: center; color: #f4efe6; }
+.tile-art .g { font-size: 1.7rem; line-height: 1; color: #e9b949; } .tile-art .s { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; opacity: .9; }
+.thumb.art-press { background: linear-gradient(150deg, #2a3243, #141a25); } .thumb.art-tv { background: linear-gradient(160deg, #16283a, #0b1119); }
+.thumb.art-podcast { background: linear-gradient(150deg, #7d1a26, #2a0a10); } .thumb.art-interview { background: linear-gradient(150deg, #3f6390, #1b2c44); }
+.thumb.art-talk { background: linear-gradient(150deg, #4a3a22, #1c150b); } .thumb.art-award { background: radial-gradient(100% 100% at 50% 30%, #2a2f3a, #0f1217); }
+.thumb.art-book { background: linear-gradient(150deg, #a3232f, #5a1019); } .thumb.art-essay { background: linear-gradient(150deg, #33413a, #151c18); }
+.post.has-img { grid-template-columns: 190px 1fr; } .post.has-img .thumb { grid-row: 1 / span 4; align-self: start; aspect-ratio: 4 / 3; }
+@media (max-width: 640px) { .post.has-img { grid-template-columns: 1fr; } .post.has-img .thumb { grid-row: auto; aspect-ratio: 16 / 8; } }
+.card .thumb { margin: -1rem -1.1rem .5rem; border-radius: 0; } .pw-feature .card .thumb { margin: -1.3rem -1.4rem .6rem; }
+.card { overflow: hidden; }

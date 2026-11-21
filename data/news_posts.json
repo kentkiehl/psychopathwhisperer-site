@@ -78,7 +78,9 @@
   "url": "https://www.quotidiano.net/cronaca/serial-killer-kent-kiehl-1.4705065",
   "html": "<p>International press: Eleonora Mancini’s article in the Italian newspaper <i>Quotidiano Nazionale</i>.</p>",
   "origin": "wordpress",
-  "wp_id": 685
+  "wp_id": 685,
+  "image": "news/Quotidiano_Nazionale.jpg",
+  "image_source": "media/2021/11/Quotidiano_Nazionale.jpg"
  },
  {
   "id": "skeptically-curious-2021",
@@ -89,7 +91,9 @@
   "url": "https://anchor.fm/skeptically-curious",
   "html": "<p>Ryan Rutherford interviews Dr. Kent Kiehl in Episode 13 of the podcast <i>Skeptically Curious</i>. Listen on <a href=\"https://open.spotify.com/episode/31Gdp8IleafDbSCFHTXnR5\" target=\"_blank\" rel=\"noopener\">Spotify</a> or <a href=\"https://podcasts.apple.com/us/podcast/episode-13-the-psychopath-whisperer-with-dr-kent/id1571100385?i=1000539268248\" target=\"_blank\" rel=\"noopener\">Apple Podcasts</a>.</p>",
   "origin": "wordpress",
-  "wp_id": 643
+  "wp_id": 643,
+  "image": "news/13389705-1623059376016-803878543c4cb.jpg",
+  "image_source": "media/2021/11/13389705-1623059376016-803878543c4cb.jpg"
  },
  {
   "id": "story-of-god-2020",
@@ -111,7 +115,9 @@
   "url": "https://www.thefix.com/brain-criminal-and-courts",
   "html": "<p>An article by Eryn Brown in <i>The Fix</i>, January 2020.</p>",
   "origin": "wordpress",
-  "wp_id": 610
+  "wp_id": 610,
+  "image": "news/dreamstime_s_99184517.jpg",
+  "image_source": "media/2020/01/dreamstime_s_99184517.jpg"
  },
  {
   "id": "megyn-kelly-2018",
@@ -162,7 +168,9 @@
   "url": "https://www.newyorker.com/magazine/2008/11/10/suffering-souls",
   "html": "<p>John Seabrook’s article in <i>The New Yorker</i> (November 10, 2008) describes Dr. Kent Kiehl’s work at the Western New Mexico Correctional Facility, where he uses MRI to scan prison inmates for signs of psychopathy in the hope of discovering a treatment.</p>",
   "origin": "wordpress",
-  "wp_id": 552
+  "wp_id": 552,
+  "image": "news/The-New-Yorker.jpg",
+  "image_source": "media/2019/10/The-New-Yorker.jpg"
  },
  {
   "id": "daily-mail-2019",
@@ -173,7 +181,9 @@
   "url": "https://www.dailymail.co.uk/sciencetech/article-7250179/MRI-scans-reveal-key-differences-gray-matter-homicide-offenders-brains.html",
   "html": "<p>A study mapping the brains of violent criminals is giving researchers new insight into the minds of murderers, which experts say may help predict violent behavior. Some warn it could lead to harmful profiling.</p>",
   "origin": "wordpress",
-  "wp_id": 442
+  "wp_id": 442,
+  "image": "news/Dailymail.jpg",
+  "image_source": "media/2019/10/Dailymail.jpg"
  },
  {
   "id": "uchicago-news-2019",
@@ -184,7 +194,9 @@
   "url": "https://news.uchicago.edu/story/scientists-studied-brains-more-800-prisoners-heres-what-they-found",
   "html": "<p>Brain scans of incarcerated men reveal reduced gray matter in homicide offenders.</p>",
   "origin": "wordpress",
-  "wp_id": 439
+  "wp_id": 439,
+  "image": "news/Uchicago-News.jpg",
+  "image_source": "media/2019/10/Uchicago-News.jpg"
  },
  {
   "id": "knowable-2019",
@@ -195,7 +207,9 @@
   "url": "https://www.knowablemagazine.org/article/mind/2019/neuroscience-criminal-justice",
   "html": "<p>States of mind that the legal system cares about (memory, responsibility and mental maturity) have long been difficult to describe objectively, but neuroscientists are starting to detect patterns. Coming soon to a courtroom near you?</p>",
   "origin": "wordpress",
-  "wp_id": 428
+  "wp_id": 428,
+  "image": "news/Knowable.jpg",
+  "image_source": "media/2019/10/Knowable.jpg"
  },
  {
   "id": "searchlight-nm-2019",
@@ -206,7 +220,9 @@
   "url": "https://www.searchlightnm.org/life-behind-bars",
   "html": "<p>About three dozen New Mexicans are incarcerated for 30 years or more for crimes they committed as minors. A growing body of science argues that young brains are not fully developed and, by implication, that children should be held to a different standard than adults.</p>",
   "origin": "wordpress",
-  "wp_id": 404
+  "wp_id": 404,
+  "image": "news/Searchlight-New-Mexico.jpg",
+  "image_source": "media/2019/10/Searchlight-New-Mexico.jpg"
  },
  {
   "id": "exploratorium-2015",
@@ -217,7 +233,9 @@
   "url": "http://www.exploratorium.edu/visit/calendar/balance-bringing-science-justice-david-faigman-may-21-2015",
   "html": "<p>A discussion at the Exploratorium in San Francisco: Dr. Kent Kiehl, David Faigman and Professor Amanda Pustilnik on the challenges posed by the use of contemporary neuroscience in the courtroom. Is neuroscience ready for courtroom use? Does brain imaging permit us to measure a person’s feelings, thoughts and intentions? Can jurors understand and effectively weigh neuroscientific evidence?</p>",
   "origin": "wordpress",
-  "wp_id": 362
+  "wp_id": 362,
+  "image": "news/Exploratorium.jpg",
+  "image_source": "media/2019/10/Exploratorium.jpg"
  },
  {
   "id": "all-about-psychology-interview-2015",
@@ -228,7 +246,9 @@
   "url": "http://www.all-about-psychology.com/kent-kiehl.html",
   "html": "<p>David Webb of All About Psychology had an in-depth interview with Dr. Kiehl about his research, ranging from how psychopathy research has changed over the past 20 years to the development of new treatments.</p>",
   "origin": "wordpress",
-  "wp_id": 359
+  "wp_id": 359,
+  "image": "news/Interview.jpg",
+  "image_source": "media/2019/10/Interview.jpg"
  },
  {
   "id": "book-of-the-month-2015",
@@ -239,7 +259,9 @@
   "url": "https://www.all-about-psychology.com/psychology-books.html",
   "html": "<p>David Webb of All About Psychology named <i>The Psychopath Whisperer</i> the psychology book of the month for February 2015.</p>",
   "origin": "wordpress",
-  "wp_id": 355
+  "wp_id": 355,
+  "image": "news/Book-of-the-Month.jpg",
+  "image_source": "media/2019/10/Book-of-the-Month.jpg"
  },
  {
   "id": "scientific-american-2015",
@@ -250,7 +272,9 @@
   "url": "http://blogs.scientificamerican.com/beautiful-minds/2015/01/19/what-is-it-like-to-be-a-psychopath/",
   "html": "<p>Read and listen to Dr. Kiehl’s interview with Scott Barry Kaufman of <i>Scientific American</i>: why psychopathy fascinates, the definition of a “true” psychopath, Dr. Kiehl’s career and his interactions with psychopaths. The <a href=\"http://www.thepsychologypodcast.com/kent-kiehl/\" target=\"_blank\" rel=\"noopener\">podcast</a> is on The Psychology Podcast.</p>",
   "origin": "wordpress",
-  "wp_id": 350
+  "wp_id": 350,
+  "image": "news/Psychology-Podcast.jpg",
+  "image_source": "media/2019/10/Psychology-Podcast.jpg"
  },
  {
   "id": "kob-mapping-criminal-minds-2014",
@@ -261,7 +285,9 @@
   "url": "http://www.nbcnews.com/watch/nbc-news-channel/mapping-the-criminal-mind-355920451701",
   "html": "<p>Nicole Brady of KOB-TV interviewed Dr. Kent Kiehl about his research with thousands of inmate volunteers, analyzing differences between psychopathic and non-psychopathic brains.</p>",
   "origin": "wordpress",
-  "wp_id": 344
+  "wp_id": 344,
+  "image": "news/MSNBC2.jpg",
+  "image_source": "media/2019/10/MSNBC2.jpg"
  },
  {
   "id": "koat-2014",
@@ -272,7 +298,9 @@
   "url": "http://www.koat.com/news/unm-prof-brains-of-dangerous-youth-underdeveloped/27624022",
   "html": "<p>Nancy Laflin of KOAT Channel 7 News interviewed Dr. Kent Kiehl about his research with juveniles. Dr. Kiehl and his team at the Mind Research Network found that the brains of youth who commit violent crimes are structured differently from those of youth with a non-violent background, differences that suggest development delayed by five to ten years.</p>",
   "origin": "wordpress",
-  "wp_id": 337
+  "wp_id": 337,
+  "image": "news/KOAT.jpg",
+  "image_source": "media/2019/10/KOAT.jpg"
  },
  {
   "id": "forbes-school-shooters-2014",
@@ -283,7 +311,9 @@
   "url": "http://www.forbes.com/sites/marciaclark/2014/07/07/school-shooters-the-first-step-in-protection-who-are-they/",
   "html": "<p>In <i>Forbes</i>, prosecutor Marcia Clark comments on the nation’s epidemic of school shootings and the relationship between psychopathy and violent behavior. Clark cites Dr. Kent Kiehl and <i>The Psychopath Whisperer</i>, and points out that the treatment program discussed in the book may be one of the best chances for early detection and intervention for youth on a trajectory towards violence.</p>",
   "origin": "wordpress",
-  "wp_id": 260
+  "wp_id": 260,
+  "image": "news/Forbes-2.jpg",
+  "image_source": "media/2019/10/Forbes-2.jpg"
  },
  {
   "id": "psychology-today-female-psychopaths",
@@ -294,7 +324,9 @@
   "url": "https://www.psychologytoday.com/us/articles/201906/why-female-psychopaths-are-different-breed",
   "html": "<p>Katherine Ramsland references Dr. Kent Kiehl in this article. Callous and opportunistic, female psychopaths are the rarest of a rare breed. Though they share much with their male counterparts, they may be even better equipped to elude detection.</p>",
   "origin": "wordpress",
-  "wp_id": 256
+  "wp_id": 256,
+  "image": "news/Psychology-Today.jpg",
+  "image_source": "media/2019/10/Psychology-Today.jpg"
  },
  {
   "id": "real-clear-science-booth-2014",
@@ -305,7 +337,9 @@
   "url": "https://www.realclearscience.com/blog/2014/07/was_john_wilkes_booth_a_psychopath.html",
   "html": "<p>Writer Ross Pomeroy investigates whether the infamous assassin John Wilkes Booth was a psychopath, working through the Hare Psychopathy Checklist item by item with Dr. Kent Kiehl’s book <i>The Psychopath Whisperer</i> as his guide.</p>",
   "origin": "wordpress",
-  "wp_id": 253
+  "wp_id": 253,
+  "image": "news/Clear-Science.png",
+  "image_source": "media/2019/10/Clear-Science.png"
  },
  {
   "id": "la-weekly-2014",
@@ -316,7 +350,9 @@
   "url": "https://www.laweekly.com/kent-kiehls-book-the-psychopath-whisperer-explains-the-calculating-killers-among-us/",
   "html": "<p>Paul Teetor’s article in <i>LA Weekly</i> describes Dr. Kent Kiehl as the world’s leading authority on psychopaths. The piece discusses <i>The Psychopath Whisperer</i>, misconceptions about psychopaths and their personality traits, and psychopathy versus psychosis.</p>",
   "origin": "wordpress",
-  "wp_id": 258
+  "wp_id": 258,
+  "image": "news/LAWeekly.png",
+  "image_source": "media/2019/10/LAWeekly.png"
  },
  {
   "id": "esquire-russia-2014",
@@ -327,7 +363,9 @@
   "url": "https://esquire.ru/archive/5479-john-seabrook/#part0",
   "html": "<p>John Seabrook’s article was translated into Russian. It gives a short account of Dr. Kent Kiehl’s life, his research with psychopaths and his studies of prisoners inside high-security prisons.</p>",
   "origin": "wordpress",
-  "wp_id": 251
+  "wp_id": 251,
+  "image": "news/Esquire.jpg",
+  "image_source": "media/2019/10/Esquire.jpg"
  },
  {
   "id": "unm-newsroom-homicide-2014",

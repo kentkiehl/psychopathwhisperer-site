@@ -1,5 +1,5 @@
 {
- "note": "Figures are read from each scientist's public Google Scholar profile. pipeline/update_metrics.py refreshes them on the first of each month; if a profile cannot be read, the previous figures stay with their date.",
+ "note": "Citation figures are read from each scientist's public Google Scholar profile and NIH grants from NIH RePORTER (grants on which the scientist is PI or one of multiple PIs). pipeline/update_metrics.py refreshes both on the first of each month; if a source cannot be read, the previous figures stay with their date.",
  "updated": "2026-11-21",
  "scientists": [
   {
@@ -21,6 +21,17 @@
     "i10_index_since": 180,
     "since_year": 2021,
     "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [],
+    "grants": 0,
+    "r01": 0,
+    "active": 0,
+    "mpi": 0,
+    "intramural_projects": 0,
+    "list": [],
+    "as_of": "2026-11-21",
+    "note": "No NIH RePORTER investigator profile found by name search on 21 Nov 2026 (based outside the United States)."
    }
   },
   {
@@ -41,6 +52,28 @@
     "i10_index": 311,
     "i10_index_since": 254,
     "since_year": 2021,
+    "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [
+     1896071
+    ],
+    "grants": 1,
+    "r01": 0,
+    "active": 0,
+    "mpi": 0,
+    "intramural_projects": 0,
+    "list": [
+     {
+      "core": "R29MH055654",
+      "activity": "R29",
+      "fy_start": 1997,
+      "fy_end": 2001,
+      "active": false,
+      "role": "PI",
+      "title": "Callous/unemotional traits and conduct problems"
+     }
+    ],
     "as_of": "2026-11-21"
    }
   },
@@ -63,6 +96,91 @@
     "i10_index_since": 301,
     "since_year": 2021,
     "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [
+     1864612
+    ],
+    "grants": 8,
+    "r01": 6,
+    "active": 0,
+    "mpi": 1,
+    "intramural_projects": 0,
+    "list": [
+     {
+      "core": "R01HD087485",
+      "activity": "R01",
+      "fy_start": 2017,
+      "fy_end": 2021,
+      "active": false,
+      "role": "MPI",
+      "title": "Omega-3 Supplementation and Adolescent Behavior"
+     },
+     {
+      "core": "R01HD042259",
+      "activity": "R01",
+      "fy_start": 2001,
+      "fy_end": 2005,
+      "active": false,
+      "role": "PI",
+      "title": "Intergenerational Transmission of Antisocial Behavior"
+     },
+     {
+      "core": "R01AA010206",
+      "activity": "R01",
+      "fy_start": 1996,
+      "fy_end": 2002,
+      "active": false,
+      "role": "PI",
+      "title": "Childhood predictors of alcholism and violence"
+     },
+     {
+      "core": "R01MH051091",
+      "activity": "R01",
+      "fy_start": 1994,
+      "fy_end": 1997,
+      "active": false,
+      "role": "PI",
+      "title": "Social and physiological factors for violence"
+     },
+     {
+      "core": "R03MH050940",
+      "activity": "R03",
+      "fy_start": 1994,
+      "fy_end": 1995,
+      "active": false,
+      "role": "PI",
+      "title": "Prefrontal deficits in schizotypals"
+     },
+     {
+      "core": "K02MH001114",
+      "activity": "K02",
+      "fy_start": 1993,
+      "fy_end": 2003,
+      "active": false,
+      "role": "PI",
+      "title": "Violence--integrating social and physiological factors"
+     },
+     {
+      "core": "R01AA008876",
+      "activity": "R01",
+      "fy_start": 1993,
+      "fy_end": 1994,
+      "active": false,
+      "role": "PI",
+      "title": "Autonomic predictors of alcohol abuse"
+     },
+     {
+      "core": "R01MH046435",
+      "activity": "R01",
+      "fy_start": 1991,
+      "fy_end": 1993,
+      "active": false,
+      "role": "PI",
+      "title": "Psychophysiology of violent and antisocial behavior"
+     }
+    ],
+    "as_of": "2026-11-21"
    }
   },
   {
@@ -80,6 +198,41 @@
     "i10_index": 305,
     "i10_index_since": 253,
     "since_year": 2021,
+    "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [
+     8469063,
+     8174809,
+     9625951,
+     8469058,
+     8469060
+    ],
+    "grants": 2,
+    "r01": 0,
+    "active": 0,
+    "mpi": 0,
+    "intramural_projects": 4,
+    "list": [
+     {
+      "core": "R34DA050286",
+      "activity": "R34",
+      "fy_start": 2019,
+      "fy_end": 2019,
+      "active": false,
+      "role": "PI",
+      "title": "The cumulative risk of substance exposure and early life adversity on child health development and outcomes"
+     },
+     {
+      "core": "K22MH109558",
+      "activity": "K22",
+      "fy_start": 2016,
+      "fy_end": 2018,
+      "active": false,
+      "role": "PI",
+      "title": "Acute threat and frustrative non-reward components of irritability and reactive aggression"
+     }
+    ],
     "as_of": "2026-11-21"
    }
   },
@@ -102,6 +255,172 @@
     "i10_index_since": 231,
     "since_year": 2021,
     "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [
+     6660654
+    ],
+    "grants": 17,
+    "r01": 14,
+    "active": 3,
+    "mpi": 7,
+    "intramural_projects": 0,
+    "list": [
+     {
+      "core": "R01DA058004",
+      "activity": "R01",
+      "fy_start": 2024,
+      "fy_end": 2026,
+      "active": true,
+      "role": "MPI",
+      "title": "Matching Treatments to Cognitive Deficits in Offenders with Substance Use Disorders"
+     },
+     {
+      "core": "R01DA055158",
+      "activity": "R01",
+      "fy_start": 2022,
+      "fy_end": 2026,
+      "active": true,
+      "role": "PI",
+      "title": "Neurocognitive Abnormalities in Stimulant Abuse among High-Risk Women"
+     },
+     {
+      "core": "R01NS126742",
+      "activity": "R01",
+      "fy_start": 2022,
+      "fy_end": 2026,
+      "active": true,
+      "role": "MPI",
+      "title": "A longitudinal study of traumatic brain injury in a high-risk population"
+     },
+     {
+      "core": "R01AA026290",
+      "activity": "R01",
+      "fy_start": 2018,
+      "fy_end": 2022,
+      "active": false,
+      "role": "MPI",
+      "title": "Mindfulness for Alcohol Abusing Offenders: Mechanisms and Outcomes"
+     },
+     {
+      "core": "R01HD092331",
+      "activity": "R01",
+      "fy_start": 2017,
+      "fy_end": 2022,
+      "active": false,
+      "role": "PI",
+      "title": "Externalizing outcomes in high risk youth"
+     },
+     {
+      "core": "R56DA026505",
+      "activity": "R56",
+      "fy_start": 2017,
+      "fy_end": 2017,
+      "active": false,
+      "role": "PI",
+      "title": "Socio-moral processing in female stimulant abuse and psychopathy"
+     },
+     {
+      "core": "R01MH109329",
+      "activity": "R01",
+      "fy_start": 2016,
+      "fy_end": 2020,
+      "active": false,
+      "role": "MPI",
+      "title": "Socioemotional processing in female offenders - Resubmission 01"
+     },
+     {
+      "core": "R01HD082257",
+      "activity": "R01",
+      "fy_start": 2015,
+      "fy_end": 2020,
+      "active": false,
+      "role": "MPI",
+      "title": "Brain changes and outcomes accompanying evidence-based treatment in high-risk youth"
+     },
+     {
+      "core": "R01DA026964",
+      "activity": "R01",
+      "fy_start": 2010,
+      "fy_end": 2014,
+      "active": false,
+      "role": "PI",
+      "title": "Action Monitoring, Action Observation and Dopamine Genes as Predictors of Substan"
+     },
+     {
+      "core": "R21DA029464",
+      "activity": "R21",
+      "fy_start": 2010,
+      "fy_end": 2011,
+      "active": false,
+      "role": "MPI",
+      "title": "Using Real-Time fRMI to Facilitate Neuromodulation to Drug-Cues in Adolescent Abu"
+     },
+     {
+      "core": "R01DA026505",
+      "activity": "R01",
+      "fy_start": 2009,
+      "fy_end": 2013,
+      "active": false,
+      "role": "PI",
+      "title": "Socio-moral processing in psychopathy and substance abuse"
+     },
+     {
+      "core": "R01MH085010",
+      "activity": "R01",
+      "fy_start": 2009,
+      "fy_end": 2013,
+      "active": false,
+      "role": "PI",
+      "title": "The Cognitive Neuroscience of Female Psychopathy"
+     },
+     {
+      "core": "R21DA027149",
+      "activity": "R21",
+      "fy_start": 2009,
+      "fy_end": 2010,
+      "active": false,
+      "role": "MPI",
+      "title": "Using rt-fMRI to Modulate Neural Responses to Drug and Nondrug Rewards in Cocaine"
+     },
+     {
+      "core": "R01MH071896",
+      "activity": "R01",
+      "fy_start": 2006,
+      "fy_end": 2010,
+      "active": false,
+      "role": "PI",
+      "title": "Neurocognitive assessment of 'callous' conduct disordered youth"
+     },
+     {
+      "core": "R01DA020870",
+      "activity": "R01",
+      "fy_start": 2005,
+      "fy_end": 2009,
+      "active": false,
+      "role": "PI",
+      "title": "Neurocognitive Changes Associated with Behavioral Treatment in Cocaine Abusers"
+     },
+     {
+      "core": "R01MH070539",
+      "activity": "R01",
+      "fy_start": 2005,
+      "fy_end": 2008,
+      "active": false,
+      "role": "PI",
+      "title": "ERP and fMRI of emotion and cognition in psychopathy"
+     },
+     {
+      "core": "R01MH072681",
+      "activity": "R01",
+      "fy_start": 2005,
+      "fy_end": 2009,
+      "active": false,
+      "role": "PI",
+      "title": "Aberrant functional connectivity in psychosis"
+     }
+    ],
+    "as_of": "2026-11-21"
    }
   },
   {
@@ -123,6 +442,17 @@
     "i10_index_since": 208,
     "since_year": 2021,
     "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [],
+    "grants": 0,
+    "r01": 0,
+    "active": 0,
+    "mpi": 0,
+    "intramural_projects": 0,
+    "list": [],
+    "as_of": "2026-11-21",
+    "note": "No NIH RePORTER investigator profile found by name search on 21 Nov 2026 (based outside the United States)."
    }
   },
   {
@@ -140,6 +470,64 @@
     "i10_index": 159,
     "i10_index_since": 111,
     "since_year": 2021,
+    "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [
+     1867320
+    ],
+    "grants": 5,
+    "r01": 4,
+    "active": 0,
+    "mpi": 1,
+    "intramural_projects": 0,
+    "list": [
+     {
+      "core": "R21DA030876",
+      "activity": "R21",
+      "fy_start": 2010,
+      "fy_end": 2011,
+      "active": false,
+      "role": "MPI",
+      "title": "Matching Cognitive Remediation to Cognitive Deficits in Substance-Abusing Inmates"
+     },
+     {
+      "core": "R01MH078980",
+      "activity": "R01",
+      "fy_start": 2007,
+      "fy_end": 2011,
+      "active": false,
+      "role": "PI",
+      "title": "Cognitive-Emotion Interactions in Psychopathy"
+     },
+     {
+      "core": "R01MH057150",
+      "activity": "R01",
+      "fy_start": 1998,
+      "fy_end": 2002,
+      "active": false,
+      "role": "PI",
+      "title": "Measuring psychopathy in female offenders"
+     },
+     {
+      "core": "R01MH053041",
+      "activity": "R01",
+      "fy_start": 1995,
+      "fy_end": 2006,
+      "active": false,
+      "role": "PI",
+      "title": "Contextual Priming in Psychopaths"
+     },
+     {
+      "core": "R01MH037711",
+      "activity": "R01",
+      "fy_start": 1985,
+      "fy_end": 1990,
+      "active": false,
+      "role": "PI",
+      "title": "Anxiety system & attentional deficits in psychopathy"
+     }
+    ],
     "as_of": "2026-11-21"
    }
   },
@@ -162,6 +550,17 @@
     "i10_index_since": 101,
     "since_year": 2021,
     "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [],
+    "grants": 0,
+    "r01": 0,
+    "active": 0,
+    "mpi": 0,
+    "intramural_projects": 0,
+    "list": [],
+    "as_of": "2026-11-21",
+    "note": "No NIH RePORTER investigator profile found by name search on 21 Nov 2026 (based outside the United States)."
    }
   },
   {
@@ -182,6 +581,28 @@
     "i10_index": 70,
     "i10_index_since": 54,
     "since_year": 2021,
+    "as_of": "2026-11-21"
+   },
+   "nih": {
+    "profile_ids": [
+     8962839
+    ],
+    "grants": 1,
+    "r01": 0,
+    "active": 0,
+    "mpi": 0,
+    "intramural_projects": 0,
+    "list": [
+     {
+      "core": "F31MH086288",
+      "activity": "F31",
+      "fy_start": 2009,
+      "fy_end": 2011,
+      "active": false,
+      "role": "PI",
+      "title": "Endocrine correlates of psychopathic traits in children: a multi-system approach"
+     }
+    ],
     "as_of": "2026-11-21"
    }
   }

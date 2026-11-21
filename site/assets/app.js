@@ -26,6 +26,12 @@ window.PW = (function () {
   const key = d => { const s = String(d || ""); return s.length === 4 ? s + "-12-31" : s.length === 7 ? s + "-31" : s; };
   const byDate = (a, b) => key(b.date).localeCompare(key(a.date));
 
+  // picture for a news item: the photo when the post has one, otherwise an illustrated panel in the site's own design
+  const GLYPH = { press: "❡", tv: "▶", podcast: "◉", interview: "❝", talk: "✦", award: "★", book: "❦", essay: "✎" };
+  function thumb(p) {
+    return `<div class="thumb art-${esc(p.kind || "press")}"><div class="tile-art"><span class="g">${GLYPH[p.kind] || "❡"}</span><span class="s">${esc(p.source || kind(p.kind))}</span></div>${p.image ? `<img src="assets/img/${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>`;
+  }
+
   // one entry on the Top science / Top books pages
   function work(w, i, isBook) {
     const then = w.scholar_2014, grow = then ? Math.round(w.scholar_citations / then * 10) / 10 : null;
@@ -41,5 +47,5 @@ window.PW = (function () {
   function probe(file, ok) { const im = new Image(); im.onload = () => ok(im); im.src = "assets/img/" + file; }
   function cover(id) { probe("psychopath-whisperer-cover.jpg", im => { const el = document.getElementById(id); if (!el) return; im.className = "coverimg"; im.alt = "Cover of The Psychopath Whisperer"; el.replaceWith(im); }); }
   function img(id, file, alt) { probe(file, im => { const el = document.getElementById(id); if (el) { im.alt = alt; el.appendChild(im); } }); }
-  return { kind, byDate, work, workNote, cover, img };
+  return { kind, byDate, thumb, work, workNote, cover, img };
 })();

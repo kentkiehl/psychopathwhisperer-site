@@ -11,10 +11,10 @@ carried over from the WordPress site psychopathwhisperer.com in November 2026.
   writes `feed.xml`, `sitemap.xml` and `robots.txt`).
 - **Data** as plain JSON in `data/`:
   `news_posts.json` (news and press; newest first on the home page and the News page),
-  `scientists.json` (Top scientists, with Google Scholar figures), `works.json` (Top science and Top books),
-  `praise.json` (reviews), `figures.json` (color figures from the book), `metrics_history.json` (one line per monthly run).
+  `scientists.json` (Top scientists, with Google Scholar figures and NIH grants as PI or MPI from NIH RePORTER), `works.json` (Top science and Top books),
+  `praise.json` (reviews), `merch.json` (the shop page), `figures.json` (color figures from the book), `metrics_history.json` (one line per monthly run).
 - **Monthly workflow** (`.github/workflows/monthly.yml`, first of each month): re-reads every scientist's Google Scholar
-  profile, adds OpenAlex citation counts for the listed papers, commits the new figures, rebuilds and deploys.
+  profile, re-reads their NIH grants from NIH RePORTER, adds OpenAlex citation counts for the listed papers, commits the new figures, rebuilds and deploys.
   If Google refuses the automated request for a profile, that scientist keeps the previous figures and date, and the
   workflow opens an issue when no profile could be read at all.
 
@@ -28,15 +28,17 @@ Blog (under revision) · Awards · Merchandise · Donate · About.
 - **Add a news item**: add an entry at the top of `data/news_posts.json` (`id`, `date` as `YYYY-MM-DD`, `title`, `source`,
   `kind`: press, tv, podcast, interview, talk, award, book or essay; `url`; `html`).
 - **Add a scientist**: add an entry to `data/scientists.json` with the `scholar_id` from the profile address
-  (`scholar.google.com/citations?user=<scholar_id>`); the figures fill in at the next monthly run.
+  (`scholar.google.com/citations?user=<scholar_id>`); the figures fill in at the next monthly run. For NIH grants also add
+  `"nih": {"profile_ids": [<id>]}` with the investigator's profile id from reporter.nih.gov.
 - **Re-read the per-paper Google Scholar counts** on Top science and Top books: edit `scholar_citations` and `scholar_as_of`
   in `data/works.json`.
+- **Open the shop**: set `shop_url` and each product's `buy_url` (and `price`) in `data/merch.json`.
 - **Blog**: `site/blog.html` shows an "Under revision" notice. Replace it when a decision is made.
 
 ## Things still to add by hand
 
 - **Images from the old site**: `python3 scripts/import_archive_images.py <archive folder>` copies the four color figures,
-  the book cover and the merchandise picture into `site/assets/img/`. Until then the pages show placeholders.
+  the book cover, the merchandise picture and the pictures of the old news posts into `site/assets/img/`. Until then the pages show placeholders.
 - **Old external links** (merchandise shop, Twitter, Facebook, faculty pages, some news links from 2014 to 2015) have not
   been checked.
 

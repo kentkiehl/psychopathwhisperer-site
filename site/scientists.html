@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://psychopathwhisperer.com/scientists.html">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://psychopathwhisperer.com/scientists.html">
-<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=1" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1">
-<link rel="stylesheet" href="assets/app.css?v=1">
-<link rel="stylesheet" href="assets/site.css?v=1">
+<link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=2" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="assets/app.css?v=2">
+<link rel="stylesheet" href="assets/site.css?v=2">
 <link rel="alternate" type="application/rss+xml" title="The Psychopath Whisperer: news" href="feed.xml">
 <style>
   .tablewrap { overflow-x: auto; }
@@ -31,15 +31,22 @@
   .rank td.who p { margin: .35rem 0 .4rem; color: var(--ink-2); font-size: .9rem; max-width: 60ch; }
   .rank td.who .lk { font-size: .84rem; display: flex; gap: .9rem; flex-wrap: wrap; }
   .rank td.on { font-weight: 600; color: var(--ink); background: var(--accent-soft); }
+  .rank tr.nihrow td { padding: 0 .7rem .9rem; text-align: left; border-bottom: 1px solid var(--line); }
+  .rank tr:has(+ tr.nihrow) td { border-bottom: none; padding-bottom: .5rem; }
+  .rank details summary { cursor: pointer; font-size: .86rem; font-weight: 600; color: var(--steel-deep); }
+  .rank .grants { list-style: none; padding: 0; margin: .5rem 0 0; font-size: .86rem; color: var(--ink-2); display: grid; gap: .3rem; max-width: 80ch; }
+  .rank .grants .code { font-family: var(--mono); font-size: .78rem; color: var(--ink); } .rank .grants .yrs, .rank .grants .role { color: var(--muted); font-size: .78rem; }
+  .rank tr.nihrow p { margin: .3rem 0 0; }
   .rank td small { display: block; color: var(--muted); font-size: .74rem; font-weight: 400; }
   @media (max-width: 720px) {
     .rank thead { display: none; }
-    .rank tbody tr { display: grid; grid-template-columns: 2rem repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); padding: .9rem 0; }
+    .rank tbody tr { display: grid; grid-template-columns: 2rem repeat(5, minmax(0, 1fr)); padding: .9rem 0 .3rem; }
+    .rank tbody tr.nihrow { display: block; padding: 0 0 .9rem 2rem; } .rank tr.nihrow td { display: block; padding: 0; border: none; } .rank tr.nihrow td:first-child { display: none; }
     .rank td { border: none; padding: .2rem .3rem; text-align: left; }
     .rank td.who { grid-column: 2 / -1; min-width: 0; padding-bottom: .6rem; }
     .rank td.n { grid-row: 1; }
     .rank td[data-l] { grid-row: 2; border-radius: 8px; padding: .4rem .5rem; }
-    .rank td[data-l]:nth-child(3) { grid-column: 2; } .rank td[data-l]:nth-child(4) { grid-column: 3; } .rank td[data-l]:nth-child(5) { grid-column: 4; } .rank td[data-l]:nth-child(6) { grid-column: 5; }
+    .rank td[data-l]:nth-child(3) { grid-column: 2; } .rank td[data-l]:nth-child(4) { grid-column: 3; } .rank td[data-l]:nth-child(5) { grid-column: 4; } .rank td[data-l]:nth-child(6) { grid-column: 5; } .rank td[data-l]:nth-child(7) { grid-column: 6; }
     .rank td small { font-size: .68rem; }
     .rank td[data-l]::before { content: attr(data-l); display: block; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   }
@@ -48,9 +55,9 @@
 <body>
 <div id="site-header"></div>
 <main class="wrap">
-  <div class="page-head"><p class="eyebrow">Top science</p><h1>Top scientists</h1><p>The scientists whose scholarly articles have shaped the peer-reviewed literature on criminal psychopathy, ranked by their Google Scholar citations.</p></div>
+  <div class="page-head"><p class="eyebrow">Top science</p><h1>Top scientists</h1><p>The scientists whose scholarly articles have shaped the peer-reviewed literature on criminal psychopathy, ranked by their Google Scholar citations, with the NIH grants each has led as principal investigator.</p></div>
   <div class="stat-row" id="stats"></div>
-  <div class="tabs" id="sort" role="tablist"><button class="on" data-k="citations">All-time citations</button><button data-k="citations_since">Citations, last five years</button><button data-k="h_index">h-index</button></div>
+  <div class="tabs" id="sort" role="tablist"><button class="on" data-k="citations">All-time citations</button><button data-k="citations_since">Citations, last five years</button><button data-k="h_index">h-index</button><button data-k="nih">NIH grants</button></div>
   <div class="tablewrap"><table class="rank" id="rank"><thead></thead><tbody><tr><td><div class="spinner">Loading…</div></td></tr></tbody></table></div>
   <p class="small muted" id="note" style="margin-top:1rem"></p>
   <h2 style="margin-top:2.4rem;font-size:1.5rem">Top psychopathy researchers under the age of 50</h2>
@@ -58,9 +65,9 @@
   <div class="callout" style="margin-top:1.5rem">To suggest another expert in psychopathy for this page, write to <a href="mailto:psychopath.whisperer@gmail.com">psychopath.whisperer@gmail.com</a>.</div>
 </main>
 <div id="site-footer"></div>
-<script src="assets/config.js?v=1"></script>
-<script src="assets/app.js?v=1"></script>
-<script src="assets/layout.js?v=1"></script>
+<script src="assets/config.js?v=2"></script>
+<script src="assets/app.js?v=2"></script>
+<script src="assets/layout.js?v=2"></script>
 <script>
 (async function () {
   const esc = CL.esc, d = await CL.getJSON("data/scientists.json"), S = d.scientists, n = x => (x == null ? "–" : Number(x).toLocaleString("en-US"));
@@ -69,16 +76,24 @@
   document.querySelector('#sort [data-k="citations_since"]').textContent = `Citations since ${since}`;
   const dates = S.map(s => s.scholar.as_of).sort(), same = dates[0] === dates[dates.length - 1];
   document.getElementById("stats").innerHTML = `<div class="stat"><b>${S.length}</b><span>Scientists</span></div><div class="stat"><b>${n(S.reduce((a, s) => a + (s.scholar.citations || 0), 0))}</b><span>Combined citations</span></div><div class="stat"><b>${CL.fmtDate(dates[dates.length - 1])}</b><span>Figures last refreshed</span></div>`;
-  document.querySelector("#rank thead").innerHTML = `<tr><th>#</th><th>Scientist</th><th>Citations</th><th>Since ${since}</th><th>h-index</th><th>i10-index</th></tr>`;
+  document.querySelector("#rank thead").innerHTML = `<tr><th>#</th><th>Scientist</th><th>Citations</th><th>Since ${since}</th><th>h-index</th><th>i10-index</th><th>NIH grants<br>as PI or MPI</th></tr>`;
+  const fy = g => g.fy_start === g.fy_end ? g.fy_start : `${g.fy_start}–${g.fy_end}`;
+  function nihCell(s) { const h = s.nih; if (!h) return "–"; const bits = []; if (h.r01) bits.push(`${h.r01} R01`); if (h.active) bits.push(`${h.active} active`);
+    return `${n(h.grants)}${bits.length ? `<small>${bits.join(" · ")}</small>` : ""}${h.intramural_projects ? `<small>+ ${h.intramural_projects} intramural</small>` : ""}`; }
+  function nihRow(s) { const h = s.nih; if (!h || (!h.grants && !h.intramural_projects && !h.note)) return "";
+    const list = h.list.map(g => `<li><span class="code">${esc(g.core)}</span> <span class="yrs">${fy(g)}</span> ${esc(g.title)} <span class="role">${g.role === "MPI" ? "multiple PI" : "PI"}</span>${g.active ? ' <span class="badge new">active</span>' : ""}</li>`).join("");
+    const intra = h.intramural_projects ? `<p class="small muted">Also led ${h.intramural_projects} intramural research projects at the National Institute of Mental Health; these are NIH's own laboratories, not grants.</p>` : "";
+    return `<tr class="nihrow"><td></td><td colspan="6">${h.grants ? `<details><summary>${h.grants} NIH grant${h.grants === 1 ? "" : "s"} as PI or MPI</summary><ul class="grants">${list}</ul>${intra}</details>` : intra || `<p class="small muted">${esc(h.note || "")}</p>`}</td></tr>`; }
   function render() {
-    const rows = S.slice().sort((a, b) => (b.scholar[key] || 0) - (a.scholar[key] || 0));
+    const val = s => key === "nih" ? (s.nih || {}).grants || 0 : s.scholar[key] || 0;
+    const rows = S.slice().sort((a, b) => val(b) - val(a) || (b.scholar.citations || 0) - (a.scholar.citations || 0));
     document.querySelector("#rank tbody").innerHTML = rows.map((s, i) => { const g = s.scholar, url = "https://scholar.google.com/citations?hl=en&user=" + encodeURIComponent(s.scholar_id);
       return `<tr id="${esc(s.id)}"><td class="n">${i + 1}</td><td class="who"><b>${esc(s.name)}</b><span class="aff">${esc(s.affiliation || "")}</span><p>${esc(s.blurb)}</p><span class="lk"><a href="${url}" target="_blank" rel="noopener">Google Scholar profile ↗</a>${s.website ? `<a href="${esc(s.website[1])}" target="_blank" rel="noopener">${esc(s.website[0])} ↗</a>` : ""}</span></td>
-        <td data-l="Citations" class="${key === "citations" ? "on" : ""}">${n(g.citations)}${same ? "" : `<small>${CL.fmtDate(g.as_of)}</small>`}</td><td data-l="Since ${since}" class="${key === "citations_since" ? "on" : ""}">${n(g.citations_since)}</td><td data-l="h-index" class="${key === "h_index" ? "on" : ""}">${n(g.h_index)}<small>${n(g.h_index_since)} since ${since}</small></td><td data-l="i10-index">${n(g.i10_index)}</td></tr>`; }).join("");
+        <td data-l="Citations" class="${key === "citations" ? "on" : ""}">${n(g.citations)}${same ? "" : `<small>${CL.fmtDate(g.as_of)}</small>`}</td><td data-l="Since ${since}" class="${key === "citations_since" ? "on" : ""}">${n(g.citations_since)}</td><td data-l="h-index" class="${key === "h_index" ? "on" : ""}">${n(g.h_index)}<small>${n(g.h_index_since)} since ${since}</small></td><td data-l="i10-index">${n(g.i10_index)}</td><td data-l="NIH grants" class="${key === "nih" ? "on" : ""}">${nihCell(s)}</td></tr>${nihRow(s)}`; }).join("");
   }
   document.getElementById("sort").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; key = b.dataset.k; document.querySelectorAll("#sort button").forEach(x => x.classList.toggle("on", x === b)); render(); });
   render();
-  document.getElementById("note").textContent = "Source: each scientist's public Google Scholar profile. The figures are refreshed automatically on the first of every month; a row shows its own date if its profile could not be read that month.";
+  document.getElementById("note").innerHTML = `Citations: each scientist's public Google Scholar profile. NIH grants: <a href="https://reporter.nih.gov/" target="_blank" rel="noopener">NIH RePORTER</a>, counting awards on which the scientist is the principal investigator or one of multiple principal investigators (MPI), each award once however often it was renewed. Co-investigator roles, subprojects of center grants and funding from other agencies or countries are not counted, and RePORTER begins in fiscal year 1985, so scientists based outside the United States show few or no NIH grants. Both sets of figures are refreshed automatically on the first of every month; NIH figures were last read on ${CL.fmtDate((S.find(s => s.nih) || {nih: {}}).nih.as_of)}.`;
 })().catch(e => { document.querySelector("#rank tbody").innerHTML = `<tr><td><div class="empty">Could not load (${CL.esc(e.message)}).</div></td></tr>`; });
 </script>
 </body>

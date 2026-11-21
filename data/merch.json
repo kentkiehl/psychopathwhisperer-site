@@ -1,0 +1,34 @@
+{
+ "note": "The old CafePress shop (cafepress.com/psychopathwhisperer) no longer exists (404 on 21 Nov 2026). Set shop_url and each product's buy_url once a new storefront is open; until then the page shows the products as 'coming soon'. Optional per product: price (text, e.g. \"$16\") and img (file in site/assets/img).",
+ "shop_url": "",
+ "contact": "psychopath.whisperer@gmail.com",
+ "products": [
+  {
+   "id": "mug",
+   "name": "Psychopath Whisperer mug",
+   "art": "mug",
+   "description": "White ceramic mug with the Psychopath Whisperer mark.",
+   "price": "",
+   "buy_url": "",
+   "img": null
+  },
+  {
+   "id": "tshirt",
+   "name": "Psychopath Whisperer T-shirt",
+   "art": "tee",
+   "description": "White T-shirt with the Psychopath Whisperer mark on the chest.",
+   "price": "",
+   "buy_url": "",
+   "img": null
+  },
+  {
+   "id": "bear",
+   "name": "Psychopath Whisperer teddy bear",
+   "art": "bear",
+   "description": "A white teddy bear in a Psychopath Whisperer shirt.",
+   "price": "",
+   "buy_url": "",
+   "img": null
+  }
+ ]
+}
