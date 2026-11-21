@@ -13,10 +13,13 @@ carried over from the WordPress site psychopathwhisperer.com in November 2026.
   `news_posts.json` (news and press; newest first on the home page and the News page),
   `scientists.json` (Top scientists, with Google Scholar figures and NIH grants as PI or MPI from NIH RePORTER), `works.json` (Top science and Top books),
   `praise.json` (reviews), `merch.json` (the shop page), `figures.json` (color figures from the book), `metrics_history.json` (one line per monthly run).
-- **Monthly workflow** (`.github/workflows/monthly.yml`, first of each month): re-reads every scientist's Google Scholar
-  profile, re-reads their NIH grants from NIH RePORTER, adds OpenAlex citation counts for the listed papers, commits the new figures, rebuilds and deploys.
-  If Google refuses the automated request for a profile, that scientist keeps the previous figures and date, and the
-  workflow opens an issue when no profile could be read at all.
+- **Monthly workflow** (`.github/workflows/monthly.yml`, first of each month): re-reads the NIH grants from NIH RePORTER,
+  adds OpenAlex citation counts for the listed papers, commits the new figures, rebuilds and deploys. It opens an issue
+  if a lookup fails.
+- **Monthly Google Scholar read**: Google refuses requests from GitHub's servers, so the Scholar figures (the nine profiles
+  in `scientists.json` and the per-work counts in `works.json`) are re-read in a browser on the 2nd of each month by a
+  scheduled Claude task on the owner's computer, which commits the new numbers here. To do it by hand from a home or
+  office connection: `python3 -m pipeline.update_metrics --scholar` (profiles only).
 
 ## Pages
 

@@ -41,7 +41,7 @@ window.PW = (function () {
       <div class="m"><b>${n(w.scholar_citations)}</b><span>Google Scholar citations</span>
         <small>as of ${CL.fmtDate(w.scholar_as_of)}${then ? `<br>${n(then)} in March 2014 <span class="up" style="display:inline;text-transform:none;letter-spacing:0;font-size:inherit">(×${grow})</span>` : ""}${w.openalex_citations != null ? `<br>OpenAlex: ${n(w.openalex_citations)} (${CL.fmtDate(w.openalex_as_of)})` : ""}${w.scholar_note ? `<br>${esc(w.scholar_note)}` : ""}</small></div></article>`;
   }
-  const workNote = d => `Google Scholar counts were read on ${CL.fmtDate(d.updated)}. A second count from OpenAlex is added automatically each month for works that have a DOI.`;
+  const workNote = d => `Google Scholar counts were read on ${CL.fmtDate(d.updated)}. They are re-read every month; a second count from OpenAlex is added automatically for works that have a DOI.`;
 
   // swap a placeholder for an image from assets/img once the file exists (book cover, merchandise photo)
   function probe(file, ok) { const im = new Image(); im.onload = () => ok(im); im.src = "assets/img/" + file; }

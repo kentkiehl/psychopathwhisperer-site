@@ -1,5 +1,5 @@
 {
- "note": "Citation figures are read from each scientist's public Google Scholar profile and NIH grants from NIH RePORTER (grants on which the scientist is PI or one of multiple PIs). pipeline/update_metrics.py refreshes both on the first of each month; if a source cannot be read, the previous figures stay with their date.",
+ "note": "Citation figures are read from each scientist's public Google Scholar profile, in a browser, once a month (Google refuses requests from GitHub's servers). NIH grants come from NIH RePORTER (grants on which the scientist is PI or one of multiple PIs) and are refreshed by pipeline/update_metrics.py on the first of each month.",
  "updated": "2026-11-21",
  "scientists": [
   {

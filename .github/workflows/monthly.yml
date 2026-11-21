@@ -1,4 +1,4 @@
-name: Monthly citation refresh and site deploy
+name: Monthly NIH and OpenAlex refresh, and site deploy
 
 # Runs on the first of each month, on every push to main that changes the site, and on demand.
 # Nothing here runs until this repository exists on GitHub and Pages is switched on (see README, "Publishing").
@@ -65,13 +65,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
-      - name: Open an issue if Google Scholar could not be read
+      - name: Open an issue if a lookup failed
         if: steps.refresh.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue create --title "Monthly citation refresh: Google Scholar could not be read ($(date -u +%F))" \
-            --body "The previous figures were kept. See $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" || true
+          gh issue create --title "Monthly refresh: a lookup failed ($(date -u +%F))" \
+            --body "Whatever could be read was saved. See $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" || true
 
   deploy:
     needs: refresh-and-build

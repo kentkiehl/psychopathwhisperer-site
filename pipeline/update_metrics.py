@@ -1,9 +1,9 @@
 """Monthly refresh of the citation figures (run by .github/workflows/monthly.yml on the first of each month).
 
-1. Top scientists (data/scientists.json): reads each scientist's public Google Scholar profile page, one request per
-   scientist with a pause between them (profile pages are the part of Scholar that its robots.txt allows). Google
-   sometimes refuses automated requests; when a profile cannot be read, that scientist's previous figures are kept
-   together with their own "as_of" date, and the run reports it. Nothing is guessed and no check is bypassed.
+1. Top scientists (data/scientists.json), ONLY with --scholar: reads each scientist's public Google Scholar profile page,
+   one request per scientist with a pause between them. Google refuses requests from GitHub's servers, so the scheduled
+   workflow does not use this; the Scholar figures are re-read in a browser once a month instead. When a profile cannot
+   be read, the previous figures are kept with their own "as_of" date. Nothing is guessed and no check is bypassed.
 2. Top science (data/works.json): adds an OpenAlex citation count for every work that has a DOI. Google Scholar has no
    interface for per-paper counts, so the Scholar numbers on that page are dated snapshots, updated by hand
    (or by asking Claude to re-read them).
@@ -11,7 +11,7 @@
    multiple PIs (see pipeline/nih.py for what is counted). Scientists without a RePORTER profile id are skipped.
 4. Appends one line per run to data/metrics_history.json.
 
-    python3 -m pipeline.update_metrics [--dry-run]
+    python3 -m pipeline.update_metrics [--scholar] [--dry-run]
 """
 import json
 import re
@@ -113,8 +113,14 @@ def update_works(today):
 def main():
     dry = "--dry-run" in sys.argv
     today = time.strftime("%Y-%m-%d")
-    print("Google Scholar profiles:")
-    sp, sd, s_ok, s_failed = update_scientists(today)
+    sp = config.DATA / "scientists.json"
+    if "--scholar" in sys.argv:
+        # Works from a home or office connection; Google refuses GitHub's servers (0 of 9 read on 21 Nov 2026),
+        # so the scheduled workflow does not pass this flag and Scholar is re-read in a browser instead.
+        print("Google Scholar profiles:")
+        sp, sd, s_ok, s_failed = update_scientists(today)
+    else:
+        sd, s_ok, s_failed = json.loads(sp.read_text(encoding="utf-8")), None, []
     print("NIH RePORTER grants as PI or MPI:")
     n_ok, n_failed = update_nih(sd, today)
     print("OpenAlex counts for works with a DOI:")
@@ -123,13 +129,15 @@ def main():
     hist = json.loads(hist_path.read_text(encoding="utf-8")) if hist_path.exists() else []
     hist.append({"date": today, "scholar_profiles_read": s_ok, "scholar_profiles_failed": s_failed, "openalex_works_read": w_ok, "nih_read": n_ok, "nih_failed": n_failed,
                  "scientists": {s["id"]: [s["scholar"]["citations"], s["scholar"]["h_index"], s["scholar"]["as_of"], (s.get("nih") or {}).get("grants")] for s in sd["scientists"]}})
-    print(f"Scholar profiles refreshed: {s_ok}/{len(sd['scientists'])}; NIH refreshed: {n_ok}; works refreshed: {w_ok}")
+    print(f"Scholar profiles refreshed: {'skipped' if s_ok is None else s_ok}; NIH refreshed: {n_ok}; works refreshed: {w_ok}")
     if not dry:
         for p, obj in ((sp, sd), (wp, wd), (hist_path, hist)):
             p.write_text(json.dumps(obj, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     if s_ok == 0:
-        # make the failure visible (the workflow opens an issue) but leave the data as it was
-        sys.exit("No Google Scholar profile could be read this month; the previous figures were kept.")
+        sys.exit("No Google Scholar profile could be read; the previous figures were kept.")
+    if n_failed or w_failed:
+        # make the failure visible (the workflow opens an issue); whatever was read has been saved
+        sys.exit(f"Some lookups failed (NIH: {n_failed}; OpenAlex: {w_failed}).")
 
 
 if __name__ == "__main__":

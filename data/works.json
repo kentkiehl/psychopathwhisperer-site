@@ -1,5 +1,5 @@
 {
- "note": "Google Scholar counts were read on the date shown. pipeline/update_metrics.py adds an OpenAlex citation count each month for works that have a DOI.",
+ "note": "Google Scholar counts are re-read in a browser once a month (search scholar_query and take the 'Cited by' number of scholar_record). pipeline/update_metrics.py adds an OpenAlex citation count each month for works that have a DOI.",
  "updated": "2026-11-21",
  "sections": [
   {
@@ -13,7 +13,9 @@
      "scholar_citations": 8940,
      "scholar_as_of": "2026-11-21",
      "scholar_2014": 5209,
-     "scholar_note": "Google Scholar splits the manual across several records; this is the largest one."
+     "scholar_note": "Google Scholar splits the manual across several records; this is the largest one.",
+     "scholar_query": "Hare Psychopathy Checklist-Revised",
+     "scholar_record": "the record titled “Psychopathy checklist—revised” by RD Hare (2003)"
     },
     {
      "id": "blair1995",
@@ -24,7 +26,9 @@
      "scholar_2014": 905,
      "doi": "10.1016/0010-0277(95)00676-P",
      "openalex_citations": 1808,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "A cognitive developmental approach to morality: Investigating the psychopath",
+     "scholar_record": "the Cognition 1995 article by RJR Blair"
     },
     {
      "id": "lykken1957",
@@ -35,7 +39,9 @@
      "scholar_2014": 894,
      "doi": "10.1037/h0047232",
      "openalex_citations": 1368,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "A study of anxiety in the sociopathic personality",
+     "scholar_record": "the record by DT Lykken"
     },
     {
      "id": "harpur1989",
@@ -46,7 +52,9 @@
      "scholar_2014": 830,
      "doi": "10.1037/1040-3590.1.1.6",
      "openalex_citations": 1227,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "Two-factor conceptualization of psychopathy: Construct validity and assessment implications",
+     "scholar_record": "the 1989 Psychological Assessment article"
     }
    ]
   },
@@ -63,7 +71,9 @@
      "scholar_2014": 548,
      "doi": "10.1016/S0006-3223(01)01222-7",
      "openalex_citations": 897,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "Limbic abnormalities in affective processing by criminal psychopaths as revealed by functional magnetic resonance imaging",
+     "scholar_record": "the 2001 Biological Psychiatry article"
     },
     {
      "id": "birbaumer2005",
@@ -74,7 +84,9 @@
      "scholar_2014": 449,
      "doi": "10.1001/archpsyc.62.7.799",
      "openalex_citations": 871,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "Deficient fear conditioning in psychopathy: a functional magnetic resonance imaging study",
+     "scholar_record": "the 2005 Archives of General Psychiatry article"
     },
     {
      "id": "yang2005",
@@ -85,7 +97,9 @@
      "scholar_2014": 206,
      "doi": "10.1016/j.biopsych.2005.01.021",
      "openalex_citations": 375,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "Volume reduction in prefrontal gray matter in unsuccessful criminal psychopaths",
+     "scholar_record": "the 2005 Biological Psychiatry article"
     },
     {
      "id": "kiehl2004",
@@ -96,7 +110,9 @@
      "scholar_2014": 176,
      "doi": "10.1016/j.pscychresns.2003.12.002",
      "openalex_citations": 101,
-     "openalex_as_of": "2026-11-21"
+     "openalex_as_of": "2026-11-21",
+     "scholar_query": "Temporal lobe abnormalities in semantic processing by criminal psychopaths as revealed by functional magnetic resonance imaging",
+     "scholar_record": "the 2004 Psychiatry Research: Neuroimaging article"
     }
    ]
   }
@@ -110,7 +126,9 @@
    "img": null,
    "scholar_citations": 243,
    "scholar_as_of": "2026-11-21",
-   "scholar_2014": null
+   "scholar_2014": null,
+   "scholar_query": "The psychopath whisperer: The science of those without conscience",
+   "scholar_record": "the book record by KA Kiehl"
   },
   {
    "id": "blair-psychopath",
@@ -120,7 +138,9 @@
    "img": null,
    "scholar_citations": 1414,
    "scholar_as_of": "2026-11-21",
-   "scholar_2014": 477
+   "scholar_2014": 477,
+   "scholar_query": "The psychopath: Emotion and the brain Blair Mitchell",
+   "scholar_record": "the book record by J Blair, D Mitchell, K Blair (2005)"
   },
   {
    "id": "without-conscience",
@@ -130,7 +150,9 @@
    "img": null,
    "scholar_citations": 4501,
    "scholar_as_of": "2026-11-21",
-   "scholar_2014": 1406
+   "scholar_2014": 1406,
+   "scholar_query": "Without conscience: The disturbing world of the psychopaths among us",
+   "scholar_record": "the book record by RD Hare"
   },
   {
    "id": "mask-of-sanity",
@@ -141,7 +163,9 @@
    "scholar_citations": 6848,
    "scholar_as_of": "2026-11-21",
    "scholar_2014": 4046,
-   "scholar_note": "Largest single Google Scholar record; other editions are counted separately."
+   "scholar_note": "Largest single Google Scholar record; other editions are counted separately.",
+   "scholar_query": "Cleckley The mask of sanity",
+   "scholar_record": "the book record “The mask of sanity: An attempt to clarify some issues about the so-called psychopathic personality” by HM Cleckley"
   }
  ]
 }
