@@ -1,0 +1,76 @@
+[
+ {
+  "date": "2026-11-21",
+  "scholar_profiles_read": 0,
+  "scholar_profiles_failed": [
+   "Robert D. Hare",
+   "Paul J. Frick",
+   "Adrian Raine",
+   "R. James R. Blair",
+   "Kent A. Kiehl",
+   "Essi Viding",
+   "Joseph P. Newman",
+   "Eva R. Kimonis",
+   "Andrea L. Glenn"
+  ],
+  "openalex_works_read": 7,
+  "nih_read": 6,
+  "nih_failed": [],
+  "scientists": {
+   "hare": [
+    95472,
+    132,
+    "2026-11-21",
+    0
+   ],
+   "frick": [
+    74200,
+    129,
+    "2026-11-21",
+    1
+   ],
+   "raine": [
+    65533,
+    130,
+    "2026-11-21",
+    8
+   ],
+   "blair": [
+    63550,
+    121,
+    "2026-11-21",
+    2
+   ],
+   "kiehl": [
+    40657,
+    102,
+    "2026-11-21",
+    17
+   ],
+   "viding": [
+    38853,
+    97,
+    "2026-11-21",
+    0
+   ],
+   "newman": [
+    31687,
+    92,
+    "2026-11-21",
+    5
+   ],
+   "kimonis": [
+    13757,
+    64,
+    "2026-11-21",
+    0
+   ],
+   "glenn": [
+    7925,
+    38,
+    "2026-11-21",
+    1
+   ]
+  }
+ }
+]
