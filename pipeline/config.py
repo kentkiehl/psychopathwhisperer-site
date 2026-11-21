@@ -6,7 +6,7 @@ DATA = ROOT / "data"
 SITE = ROOT / "site"
 SITE_DATA = SITE / "data"
 
-SITE_URL = (os.environ.get("PW_SITE_URL") or "https://psychopathwhisperer.com").rstrip("/")
+SITE_URL = (os.environ.get("PW_SITE_URL") or "https://kentkiehl.github.io/psychopathwhisperer-site").rstrip("/")
 SITE_NAME = "The Psychopath Whisperer"
 CONTACT_EMAIL = os.environ.get("PW_CONTACT_EMAIL", "")   # polite-pool address for OpenAlex (repository variable)
 TOOL_NAME = "psychopathwhisperer-site"
