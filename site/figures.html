@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figures from the book | The Psychopath Whisperer</title>
+<meta name="description" content="Color copies of the brain imaging figures printed in black and white in The Psychopath Whisperer.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="The Psychopath Whisperer">
+<meta property="og:title" content="Figures from the book | The Psychopath Whisperer">
+<meta property="og:description" content="Color copies of the brain imaging figures printed in black and white in The Psychopath Whisperer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psychopathwhisperer.com/figures.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://psychopathwhisperer.com/figures.html">
+<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=1" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<link rel="alternate" type="application/rss+xml" title="The Psychopath Whisperer: news" href="feed.xml">
+<style>
+  .fig { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1.6rem; align-items: center; padding: 1.6rem 0; border-top: 1px solid var(--line); }
+  .fig:first-child { border-top: none; }
+  @media (max-width: 760px) { .fig { grid-template-columns: 1fr; } }
+  .fig img { width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--line); background: #000; display: block; }
+  .fig .ph { aspect-ratio: 2 / 1; display: grid; place-items: center; border: 1px dashed var(--line-2); border-radius: var(--radius-sm); color: var(--muted); font-size: .9rem; text-align: center; padding: 1rem; }
+  .fig h2 { font-size: 1.3rem; margin: 0 0 .4rem; } .fig p { margin: 0; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head"><p class="eyebrow">The book</p><h1>Figures from <i>The Psychopath Whisperer</i></h1><p><a href="http://www.amazon.com/The-Psychopath-Whisperer-Science-Conscience/dp/077043584X" target="_blank" rel="noopener"><i>The Psychopath Whisperer</i></a> is printed in black and white. Here are color copies of the important figures in the book.</p></div>
+  <div id="figs"><div class="spinner">Loading…</div></div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/config.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+<script src="assets/layout.js?v=1"></script>
+<script>
+(async function () {
+  const esc = CL.esc, figs = await CL.getJSON("data/figures.json");
+  document.getElementById("figs").innerHTML = figs.map(f => `<section class="fig"><a href="assets/img/figures/${esc(f.img)}" target="_blank" rel="noopener"><img src="assets/img/figures/${esc(f.img)}" alt="${esc(f.label)}" loading="lazy" onerror="this.parentElement.outerHTML='<div class=&quot;ph&quot;>Image ${esc(f.img)} is added from the site archive (see README).</div>'"></a><div><h2>${esc(f.label)}</h2><p>${esc(f.caption)}</p></div></section>`).join("");
+})().catch(e => { document.getElementById("figs").innerHTML = `<div class="empty">Could not load (${CL.esc(e.message)}).</div>`; });
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+{
+ "note": "Google Scholar counts were read on the date shown. pipeline/update_metrics.py adds an OpenAlex citation count each month for works that have a DOI.",
+ "updated": "2026-11-21",
+ "sections": [
+  {
+   "id": "works",
+   "title": "Top psychopathy works",
+   "items": [
+    {
+     "id": "pclr",
+     "cite_html": "Hare, R.D. (1991; 2003). <i>Manual for the Hare Psychopathy Checklist-Revised (Hare PCL-R)</i>. Multi-Health Systems, Toronto.",
+     "note": "The Hare PCL-R is the main tool researchers and clinicians use to assess psychopathic traits. It was first published in 1991 and revised in 2003. The manual is available only to professionals; the instrument is described for general readers in Dr. Hare's <i>Without Conscience</i> and Dr. Kiehl's <i>The Psychopath Whisperer</i>.",
+     "scholar_citations": 8940,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 5209,
+     "scholar_note": "Google Scholar splits the manual across several records; this is the largest one."
+    },
+    {
+     "id": "blair1995",
+     "cite_html": "Blair, R.J.R. (1995). A cognitive developmental approach to morality: Investigating the psychopath. <i>Cognition</i>, 57(1), 1-29.",
+     "note": "Describes a psychological model for immoral behavior in psychopaths and tests it in 10 psychopaths and 10 nonpsychopaths. An influential paper that established Dr. Blair's Violence Inhibition Mechanism (VIM).",
+     "scholar_citations": 2483,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 905,
+     "doi": "10.1016/0010-0277(95)00676-P"
+    },
+    {
+     "id": "lykken1957",
+     "cite_html": "Lykken, D.T. (1957). A study of anxiety in the sociopathic personality. <i>The Journal of Abnormal and Social Psychology</i>, 55(1), 6-10.",
+     "note": "An oldie but a goodie. The first paper to show that psychopaths sweat less from the palms (lower skin conductance) when anticipating punishment. Psychopaths do not worry about punishment, and so do not learn from bad experiences the way the rest of us do.",
+     "scholar_citations": 2089,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 894,
+     "doi": "10.1037/h0047232"
+    },
+    {
+     "id": "harpur1989",
+     "cite_html": "Harpur, T.J., Hare, R.D., &amp; Hakstian, A.R. (1989). Two-factor conceptualization of psychopathy: Construct validity and assessment implications. <i>Psychological Assessment</i>, 1(1), 6-17.",
+     "note": "Showed that psychopathic traits have two components: interpersonal and affective traits (glibness, lack of empathy, guilt and remorse), and traits measuring impulsivity and life-course trajectory (poor behavioral controls, early childhood problems, serious adolescent antisocial behavior, and continued antisocial behavior as an adult).",
+     "scholar_citations": 1889,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 830,
+     "doi": "10.1037/1040-3590.1.1.6"
+    }
+   ]
+  },
+  {
+   "id": "imaging",
+   "title": "Top brain imaging papers in psychopathy",
+   "items": [
+    {
+     "id": "kiehl2001",
+     "cite_html": "Kiehl, K.A., Smith, A.M., Hare, R.D., Mendrek, A., Forster, B.B., Brink, J., &amp; Liddle, P.F. (2001). Limbic abnormalities in affective processing by criminal psychopaths as revealed by functional magnetic resonance imaging. <i>Biological Psychiatry</i>, 50, 677-684.",
+     "note": "The first functional MRI publication in criminal psychopaths. The authors reported limbic (emotional) brain abnormalities in psychopaths during the processing of emotional stimuli.",
+     "scholar_citations": 1287,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 548,
+     "doi": "10.1016/S0006-3223(01)01222-7"
+    },
+    {
+     "id": "birbaumer2005",
+     "cite_html": "Birbaumer, N., Veit, R., Lotze, M., Erb, M., Hermann, C., Grodd, W., &amp; Flor, H. (2005). Deficient fear conditioning in psychopathy: A functional magnetic resonance imaging study. <i>Archives of General Psychiatry</i>, 62, 799-805.",
+     "note": "Following Lykken's model of low anxiety in response to punishment, this study found that psychopaths showed less activity in limbic regions than nonpsychopaths when facing punishment stimuli. Participants had low to moderate psychopathy scores (Hare PCL-R scores from 10 to 31).",
+     "scholar_citations": 1207,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 449,
+     "doi": "10.1001/archpsyc.62.7.799"
+    },
+    {
+     "id": "yang2005",
+     "cite_html": "Yang, Y., Raine, A., Lencz, T., Bihrle, S., LaCasse, L., &amp; Colletti, P. (2005). Volume reduction in prefrontal gray matter in unsuccessful criminal psychopaths. <i>Biological Psychiatry</i>, 57(10), 1103-1108.",
+     "note": "Reported that psychopaths showed reduced gray matter volume in parts of the frontal lobes.",
+     "scholar_citations": 558,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 206,
+     "doi": "10.1016/j.biopsych.2005.01.021"
+    },
+    {
+     "id": "kiehl2004",
+     "cite_html": "Kiehl, K.A., Smith, A.M., Mendrek, A., Forster, B.B., Hare, R.D., &amp; Liddle, P.F. (2004). Temporal lobe abnormalities in semantic processing by criminal psychopaths as revealed by functional magnetic resonance imaging. <i>Psychiatry Research: Neuroimaging</i>, 130(1), 27-42.",
+     "note": "The first paper to implicate the anterior temporal pole in psychopaths. The anterior temporal pole is part of the paralimbic system of the brain.",
+     "scholar_citations": 370,
+     "scholar_as_of": "2026-11-21",
+     "scholar_2014": 176,
+     "doi": "10.1016/j.pscychresns.2003.12.002"
+    }
+   ]
+  }
+ ],
+ "books": [
+  {
+   "id": "psychopath-whisperer",
+   "cite_html": "Kiehl, K.A. (2014). <i>The Psychopath Whisperer: The Science of Those Without Conscience</i>. Crown, New York.",
+   "note": "The latest science of psychopaths, written for the general public.",
+   "link": "book.html",
+   "img": null,
+   "scholar_citations": 243,
+   "scholar_as_of": "2026-11-21",
+   "scholar_2014": null
+  },
+  {
+   "id": "blair-psychopath",
+   "cite_html": "Blair, R.J.R., Mitchell, D., &amp; Blair, K. (2005). <i>The Psychopath: Emotion and the Brain</i>. Blackwell Publishing.",
+   "note": "Written more for scientists than for the general public.",
+   "link": "https://www.amazon.com/Psychopath-Emotion-Brain-James-Blair/dp/0631233369",
+   "img": null,
+   "scholar_citations": 1414,
+   "scholar_as_of": "2026-11-21",
+   "scholar_2014": 477
+  },
+  {
+   "id": "without-conscience",
+   "cite_html": "Hare, R.D. (1993). <i>Without Conscience: The Disturbing World of the Psychopaths Among Us</i>. Guilford Press, New York.",
+   "note": "A very readable book. Highly recommended.",
+   "link": "https://www.amazon.com/Without-Conscience-Disturbing-World-Psychopaths/dp/1572304510",
+   "img": null,
+   "scholar_citations": 4501,
+   "scholar_as_of": "2026-11-21",
+   "scholar_2014": 1406
+  },
+  {
+   "id": "mask-of-sanity",
+   "cite_html": "Cleckley, H. (1941; fifth edition 1976). <i>The Mask of Sanity</i>. Mosby, St. Louis.",
+   "note": "One of the most important clinical descriptions of psychopaths ever written. It formed the basis for how scientists assess psychopathic traits today. The writing is excellent, though the prose is hard to follow in places.",
+   "link": "https://www.amazon.com/Mask-Sanity-Attempt-Psychopathic-Personality/dp/0962151904",
+   "img": null,
+   "scholar_citations": 6848,
+   "scholar_as_of": "2026-11-21",
+   "scholar_2014": 4046,
+   "scholar_note": "Largest single Google Scholar record; other editions are counted separately."
+  }
+ ]
+}

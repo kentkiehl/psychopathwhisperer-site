@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | The Psychopath Whisperer</title>
+<meta name="description" content="About The Psychopath Whisperer website and its author, Kent A. Kiehl, PhD, of the Mind Research Network and the University of New Mexico.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="The Psychopath Whisperer">
+<meta property="og:title" content="About | The Psychopath Whisperer">
+<meta property="og:description" content="About The Psychopath Whisperer website and its author, Kent A. Kiehl, PhD, of the Mind Research Network and the University of New Mexico.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psychopathwhisperer.com/about.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://psychopathwhisperer.com/about.html">
+<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=1" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<link rel="alternate" type="application/rss+xml" title="The Psychopath Whisperer: news" href="feed.xml">
+<style>
+  .about { display: grid; gap: 2.4rem; grid-template-columns: 1fr; align-items: start; }
+  @media (min-width: 860px) { .about { grid-template-columns: 1.6fr 1fr; } }
+  .portrait { width: 100%; max-width: 320px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); display: block; margin-bottom: 1rem; }
+  .pane { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 1rem 1.1rem; max-width: 320px; }
+  .pane-h { font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); font-weight: 600; margin-bottom: .6rem; }
+  .pane .stat-row { border: none; padding: 0; margin: 0; gap: 1.4rem; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head"><p class="eyebrow">About</p><h1>About this site</h1><p>A place to review and discuss the latest scientific research on psychopathy.</p></div>
+  <div class="about">
+    <div class="prose">
+      <p>The Psychopath Whisperer website was created to review and discuss the latest scientific research on psychopathy. Our hope is that it will improve understanding, and correct misconceptions, of those few among us who lack empathy and a conscience, on the basis of scientific data.</p>
+      <p>The website is managed by scientists in the laboratory of Dr. Kent A. Kiehl (<a href="https://kentkiehl.com/" target="_blank" rel="noopener">kentkiehl.com</a>). We welcome feedback: if you have questions or comments, please email <a href="mailto:psychopath.whisperer@gmail.com">psychopath.whisperer@gmail.com</a>.</p>
+      <h2>Kent A. Kiehl, PhD</h2>
+      <p>Kent Kiehl is Executive Science Officer and Director of Mobile Imaging at the nonprofit Mind Research Network and Professor of Psychology, Neurosciences and Law at the University of New Mexico in Albuquerque. He has studied psychopathy for more than 30 years and has published more than 280 peer-reviewed papers. He is the author of <a href="book.html"><i>The Psychopath Whisperer: The Science of Those Without Conscience</i></a> (Crown, 2014) and co-editor of the <i>Handbook on Psychopathy and Law</i> (Oxford University Press, 2013).</p>
+      <p>Kiehl trained with Robert Hare, author of the Psychopathy Checklist-Revised, and Peter Liddle at the University of British Columbia, where he published the first fMRI study of brain dysfunction in criminal psychopaths. Because no prison in the United States has an MRI scanner, he designed a mobile MRI system that brings the scanner to correctional and forensic facilities. It has scanned more than 6,000 incarcerated people across a dozen states, creating the largest forensic neuroimaging repository in the world.</p>
+      <p>In 2026 he received the Robert D. Hare Lifetime Achievement Award, the highest honor of the Society for the Scientific Study of Psychopathy.</p>
+      <p><a class="btn" href="https://kentkiehl.com/" target="_blank" rel="noopener">Kiehl Lab website ↗</a> <a class="btn" href="scientists.html">Citation figures</a></p>
+      <h2>About the book</h2>
+      <p><i>The Psychopath Whisperer</i> is a journey into the science and behavior of psychopaths, from the remorseless serial killers Kiehl meets behind bars to children whose behavior shows the early warning signs. <a href="book.html">Read more about the book</a>.</p>
+    </div>
+    <aside><img src="assets/img/kent-kiehl.jpg" alt="Kent A. Kiehl" class="portrait"><div class="pane" id="kk"></div></aside>
+  </div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/config.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+<script src="assets/layout.js?v=1"></script>
+<script>
+(async function () {
+  const d = await CL.getJSON("data/scientists.json"), k = d.scientists.find(s => s.id === "kiehl"); if (!k) return; const g = k.scholar, n = x => Number(x).toLocaleString("en-US");
+  document.getElementById("kk").innerHTML = `<div class="pane-h">By the numbers</div><div class="stat-row"><div class="stat"><b>${n(g.citations)}</b><span>Citations</span></div><div class="stat"><b>${n(g.h_index)}</b><span>h-index</span></div></div><div class="small muted" style="margin-top:.5rem">Google Scholar, ${CL.fmtDate(g.as_of)}. Refreshed monthly.</div>`;
+})().catch(() => {});
+</script>
+</body>
+</html>

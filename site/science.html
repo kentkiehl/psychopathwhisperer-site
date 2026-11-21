@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top science | The Psychopath Whisperer</title>
+<meta name="description" content="The most cited scientific works in the field of psychopathy and the most cited brain imaging papers, with current citation counts.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="The Psychopath Whisperer">
+<meta property="og:title" content="Top science | The Psychopath Whisperer">
+<meta property="og:description" content="The most cited scientific works in the field of psychopathy and the most cited brain imaging papers, with current citation counts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psychopathwhisperer.com/science.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://psychopathwhisperer.com/science.html">
+<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=1" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<link rel="alternate" type="application/rss+xml" title="The Psychopath Whisperer: news" href="feed.xml">
+
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head"><p class="eyebrow">Top science</p><h1>The most cited science of psychopathy</h1><p>The most cited scientific works in the field of psychopathy. Citation counts are compared with the counts recorded when this page was first written in 2014.</p></div>
+  <div id="works"><div class="spinner">Loading…</div></div>
+  <p class="small muted" id="note" style="margin-top:1.4rem"></p>
+</main>
+<div id="site-footer"></div>
+<script src="assets/config.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+<script src="assets/layout.js?v=1"></script>
+<script>
+(async function () {
+  const d = await CL.getJSON("data/works.json");
+  document.getElementById("works").innerHTML = d.sections.map(s => `<h2 class="wsec" id="${CL.esc(s.id)}">${CL.esc(s.title)}</h2>` + s.items.slice().sort((a, b) => b.scholar_citations - a.scholar_citations).map((w, i) => PW.work(w, i + 1)).join("")).join("");
+  document.getElementById("note").textContent = PW.workNote(d);
+})().catch(e => { document.getElementById("works").innerHTML = `<div class="empty">Could not load (${CL.esc(e.message)}).</div>`; });
+</script>
+</body>
+</html>

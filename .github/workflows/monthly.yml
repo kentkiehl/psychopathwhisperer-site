@@ -1,0 +1,82 @@
+name: Monthly citation refresh and site deploy
+
+# Runs on the first of each month, on every push to main that changes the site, and on demand.
+# Nothing here runs until this repository exists on GitHub and Pages is switched on (see README, "Publishing").
+on:
+  schedule:
+    - cron: "23 11 1 * *"     # 11:23 UTC on the 1st
+  workflow_dispatch:
+    inputs:
+      skip_refresh:
+        description: "Skip the citation refresh; only rebuild and deploy"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["site/**", "data/**", "pipeline/**", ".github/workflows/monthly.yml"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Refresh citation figures
+        id: refresh
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.skip_refresh)
+        continue-on-error: true
+        env:
+          PW_SITE_URL: ${{ vars.PW_SITE_URL }}
+          PW_CONTACT_EMAIL: ${{ vars.PW_CONTACT_EMAIL }}
+        run: python -m pipeline.update_metrics
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "pw-site-bot"
+          git config user.email "pw-site-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "data: monthly citation refresh $(date -u +%F)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Build site data
+        env:
+          PW_SITE_URL: ${{ vars.PW_SITE_URL }}
+        run: python -m pipeline.build_site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Open an issue if Google Scholar could not be read
+        if: steps.refresh.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Monthly citation refresh: Google Scholar could not be read ($(date -u +%F))" \
+            --body "The previous figures were kept. See $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" || true
+
+  deploy:
+    needs: refresh-and-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

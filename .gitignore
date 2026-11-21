@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+.DS_Store
+*.log
+work/
+# built by pipeline/build_site.py (in CI and locally)
+site/data/
+site/feed.xml
+site/sitemap.xml
+site/robots.txt

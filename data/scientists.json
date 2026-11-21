@@ -1,0 +1,189 @@
+{
+ "note": "Figures are read from each scientist's public Google Scholar profile. pipeline/update_metrics.py refreshes them on the first of each month; if a profile cannot be read, the previous figures stay with their date.",
+ "updated": "2026-11-21",
+ "scientists": [
+  {
+   "id": "hare",
+   "name": "Robert D. Hare",
+   "scholar_id": "cIghoaMAAAAJ",
+   "affiliation": "University of British Columbia (emeritus)",
+   "blurb": "The world's leading authority on psychopathy and author of the Hare Psychopathy Checklist-Revised (PCL-R), the main tool researchers and clinicians use to assess psychopathic traits.",
+   "website": [
+    "Personal website",
+    "http://www.hare.org/"
+   ],
+   "scholar": {
+    "citations": 95472,
+    "citations_since": 18773,
+    "h_index": 132,
+    "h_index_since": 60,
+    "i10_index": 288,
+    "i10_index_since": 180,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "frick",
+   "name": "Paul J. Frick",
+   "scholar_id": "Tt9YfAoAAAAJ",
+   "affiliation": "Louisiana State University",
+   "blurb": "A leading authority on callous-unemotional traits (the precursors of psychopathic traits) in children.",
+   "website": [
+    "Faculty website",
+    "https://www.lsu.edu/hss/psychology/faculty/clinical/frick.php"
+   ],
+   "scholar": {
+    "citations": 74200,
+    "citations_since": 20608,
+    "h_index": 129,
+    "h_index_since": 71,
+    "i10_index": 311,
+    "i10_index_since": 254,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "raine",
+   "name": "Adrian Raine",
+   "scholar_id": "lFZ9akwAAAAJ",
+   "affiliation": "University of Pennsylvania",
+   "blurb": "A top researcher in psychopathy whose work also covers antisocial behavior generally and criminal behavior in particular.",
+   "website": [
+    "Faculty website",
+    "https://crim.sas.upenn.edu/people/adrian-raine"
+   ],
+   "scholar": {
+    "citations": 65533,
+    "citations_since": 16661,
+    "h_index": 130,
+    "h_index_since": 63,
+    "i10_index": 450,
+    "i10_index_since": 301,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "blair",
+   "name": "R. James R. Blair",
+   "scholar_id": "_z1xPSEAAAAJ",
+   "affiliation": "Boys Town National Research Hospital",
+   "blurb": "A noted authority on psychopathy and anxiety disorders, and the author of the Violence Inhibition Mechanism model.",
+   "website": null,
+   "scholar": {
+    "citations": 63550,
+    "citations_since": 15957,
+    "h_index": 121,
+    "h_index_since": 66,
+    "i10_index": 305,
+    "i10_index_since": 253,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "kiehl",
+   "name": "Kent A. Kiehl",
+   "scholar_id": "JiyVnPcAAAAJ",
+   "affiliation": "Mind Research Network and University of New Mexico",
+   "blurb": "Author of The Psychopath Whisperer: The Science of Those Without Conscience. Dr. Kiehl specializes in the neuroscience of psychopathy.",
+   "website": [
+    "Kiehl Lab website",
+    "https://kentkiehl.com/"
+   ],
+   "scholar": {
+    "citations": 40657,
+    "citations_since": 12505,
+    "h_index": 102,
+    "h_index_since": 57,
+    "i10_index": 253,
+    "i10_index_since": 231,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "viding",
+   "name": "Essi Viding",
+   "scholar_id": "Ydwv2DYAAAAJ",
+   "affiliation": "University College London",
+   "blurb": "Professor of Developmental Psychopathology at University College London, where she co-directs the Developmental Risk and Resilience Unit.",
+   "website": [
+    "Research unit website",
+    "https://drru-research.org/"
+   ],
+   "scholar": {
+    "citations": 38853,
+    "citations_since": 16398,
+    "h_index": 97,
+    "h_index_since": 67,
+    "i10_index": 235,
+    "i10_index_since": 208,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "newman",
+   "name": "Joseph P. Newman",
+   "scholar_id": "iYf-r0IAAAAJ",
+   "affiliation": "University of Wisconsin-Madison (emeritus)",
+   "blurb": "Best known for his research on attentional processes in psychopathy.",
+   "website": null,
+   "scholar": {
+    "citations": 31687,
+    "citations_since": 5423,
+    "h_index": 92,
+    "h_index_since": 43,
+    "i10_index": 159,
+    "i10_index_since": 111,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "kimonis",
+   "name": "Eva R. Kimonis",
+   "scholar_id": "SMe_nRIAAAAJ",
+   "affiliation": "University of New South Wales, Sydney",
+   "blurb": "Studies the development, assessment and treatment of psychopathic traits and aggressive behavior in youth, with special interest in childhood maltreatment and deficits in emotional processing.",
+   "website": [
+    "Research group website",
+    "http://www.conductproblems.com/team/eva-kimonis/"
+   ],
+   "scholar": {
+    "citations": 13757,
+    "citations_since": 6410,
+    "h_index": 64,
+    "h_index_since": 46,
+    "i10_index": 109,
+    "i10_index_since": 101,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  },
+  {
+   "id": "glenn",
+   "name": "Andrea L. Glenn",
+   "scholar_id": "IMkdpg0AAAAJ",
+   "affiliation": "University of Alabama",
+   "blurb": "Psychologist at the University of Alabama, with a PhD from the University of Pennsylvania and a degree in neuroscience and behavioral biology from Emory University.",
+   "website": [
+    "Faculty website",
+    "https://aglenn.people.ua.edu/"
+   ],
+   "scholar": {
+    "citations": 7925,
+    "citations_since": 3030,
+    "h_index": 38,
+    "h_index_since": 31,
+    "i10_index": 70,
+    "i10_index_since": 54,
+    "since_year": 2021,
+    "as_of": "2026-11-21"
+   }
+  }
+ ]
+}

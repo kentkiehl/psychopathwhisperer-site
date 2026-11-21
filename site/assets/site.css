@@ -1,0 +1,24 @@
+/* Psychopath Whisperer additions to the shared framework stylesheet (app.css is kept identical to the Kiehl Lab site). */
+.cover { aspect-ratio: 2 / 3; border-radius: 6px 14px 14px 6px; background: linear-gradient(150deg, #7d1a26, #2a0a10 80%); color: #f4efe6; padding: 1.4rem 1.2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow), inset 6px 0 0 rgba(255,255,255,.07); font-family: var(--serif); }
+.cover b { font-weight: 500; font-size: 1.55rem; line-height: 1.1; } .cover i { font: 600 .7rem var(--sans); letter-spacing: .1em; text-transform: uppercase; color: #e9b949; } .cover span { font-size: .85rem; opacity: .88; line-height: 1.35; }
+img.coverimg { width: 100%; border-radius: 6px 14px 14px 6px; box-shadow: var(--shadow); display: block; }
+blockquote.pull { margin: 1.6rem 0; padding: 0 0 0 1.2rem; border-left: 3px solid var(--accent); font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; }
+blockquote.pull cite { display: block; margin-top: .5rem; font: 500 .85rem var(--sans); color: var(--muted); font-style: normal; }
+.wsec { font-size: 1.5rem; margin: 2.2rem 0 .4rem; }
+.work { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) 190px; gap: 1.2rem; padding: 1.3rem 0; border-top: 1px solid var(--line); align-items: start; }
+.work .n { font-family: var(--serif); font-size: 1.5rem; color: var(--accent-deep); }
+.work .c { margin: 0 0 .4rem; font-size: 1rem; } .work .d { margin: 0; color: var(--ink-2); font-size: .93rem; max-width: 70ch; }
+.work .m { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .8rem .9rem; }
+.work .m b { font-family: var(--serif); font-weight: 400; font-size: 1.7rem; line-height: 1; display: block; font-variant-numeric: tabular-nums; }
+.work .m span { display: block; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: .25rem; }
+.work .m small { display: block; font-size: .78rem; color: var(--ink-2); margin-top: .45rem; line-height: 1.35; }
+.work .m .up { color: var(--ok, #2f7d4f); font-weight: 600; }
+.work.has-img { grid-template-columns: 2.4rem 90px minmax(0, 1fr) 190px; } .work img.bk { width: 90px; border-radius: 4px; box-shadow: var(--shadow); }
+@media (max-width: 760px) { .work, .work.has-img { grid-template-columns: 2rem minmax(0, 1fr); } .work .m { grid-column: 2; } .work img.bk { display: none; } }
+.filter-top .count { color: var(--muted); font-size: .88rem; }
+#merch img { max-width: 100%; border-radius: var(--radius); border: 1px solid var(--line); margin-top: 1.2rem; }
+a.btn, p a.btn, li a.btn { text-decoration: none; }
+.btn.primary, p a.btn.primary { color: #fff; box-shadow: 0 10px 24px -12px rgba(125,26,38,.7); }
+.darkstrip .eyebrow { color: #f0a3a8; } .darkstrip .eyebrow::before { background: #f0a3a8; }
+.darkstrip h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.tabs button.on { color: #fff; }

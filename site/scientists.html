@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top scientists | The Psychopath Whisperer</title>
+<meta name="description" content="Scientists who have shaped the peer-reviewed literature on criminal psychopathy, ranked by Google Scholar citations and refreshed every month.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="The Psychopath Whisperer">
+<meta property="og:title" content="Top scientists | The Psychopath Whisperer">
+<meta property="og:description" content="Scientists who have shaped the peer-reviewed literature on criminal psychopathy, ranked by Google Scholar citations and refreshed every month.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psychopathwhisperer.com/scientists.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://psychopathwhisperer.com/scientists.html">
+<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=1" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<link rel="alternate" type="application/rss+xml" title="The Psychopath Whisperer: news" href="feed.xml">
+<style>
+  .tablewrap { overflow-x: auto; }
+  .rank { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .rank th { text-align: right; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: .5rem .7rem; border-bottom: 1px solid var(--line-2); white-space: nowrap; }
+  .rank th:nth-child(1), .rank th:nth-child(2) { text-align: left; }
+  .rank td { padding: 1rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; text-align: right; font-variant-numeric: tabular-nums; }
+  .rank td.n { font-family: var(--serif); font-size: 1.5rem; color: var(--accent-deep); text-align: left; width: 2.4rem; }
+  .rank td.who { text-align: left; min-width: 260px; }
+  .rank td.who b { font-family: var(--serif); font-weight: 500; font-size: 1.2rem; display: block; }
+  .rank td.who .aff { color: var(--muted); font-size: .84rem; }
+  .rank td.who p { margin: .35rem 0 .4rem; color: var(--ink-2); font-size: .9rem; max-width: 60ch; }
+  .rank td.who .lk { font-size: .84rem; display: flex; gap: .9rem; flex-wrap: wrap; }
+  .rank td.on { font-weight: 600; color: var(--ink); background: var(--accent-soft); }
+  .rank td small { display: block; color: var(--muted); font-size: .74rem; font-weight: 400; }
+  @media (max-width: 720px) {
+    .rank thead { display: none; }
+    .rank tbody tr { display: grid; grid-template-columns: 2rem repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); padding: .9rem 0; }
+    .rank td { border: none; padding: .2rem .3rem; text-align: left; }
+    .rank td.who { grid-column: 2 / -1; min-width: 0; padding-bottom: .6rem; }
+    .rank td.n { grid-row: 1; }
+    .rank td[data-l] { grid-row: 2; border-radius: 8px; padding: .4rem .5rem; }
+    .rank td[data-l]:nth-child(3) { grid-column: 2; } .rank td[data-l]:nth-child(4) { grid-column: 3; } .rank td[data-l]:nth-child(5) { grid-column: 4; } .rank td[data-l]:nth-child(6) { grid-column: 5; }
+    .rank td small { font-size: .68rem; }
+    .rank td[data-l]::before { content: attr(data-l); display: block; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head"><p class="eyebrow">Top science</p><h1>Top scientists</h1><p>The scientists whose scholarly articles have shaped the peer-reviewed literature on criminal psychopathy, ranked by their Google Scholar citations.</p></div>
+  <div class="stat-row" id="stats"></div>
+  <div class="tabs" id="sort" role="tablist"><button class="on" data-k="citations">All-time citations</button><button data-k="citations_since">Citations, last five years</button><button data-k="h_index">h-index</button></div>
+  <div class="tablewrap"><table class="rank" id="rank"><thead></thead><tbody><tr><td><div class="spinner">Loading…</div></td></tr></tbody></table></div>
+  <p class="small muted" id="note" style="margin-top:1rem"></p>
+  <h2 style="margin-top:2.4rem;font-size:1.5rem">Top psychopathy researchers under the age of 50</h2>
+  <p class="muted">Coming soon.</p>
+  <div class="callout" style="margin-top:1.5rem">To suggest another expert in psychopathy for this page, write to <a href="mailto:psychopath.whisperer@gmail.com">psychopath.whisperer@gmail.com</a>.</div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/config.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+<script src="assets/layout.js?v=1"></script>
+<script>
+(async function () {
+  const esc = CL.esc, d = await CL.getJSON("data/scientists.json"), S = d.scientists, n = x => (x == null ? "–" : Number(x).toLocaleString("en-US"));
+  let key = "citations";
+  const since = (S[0].scholar || {}).since_year || "";
+  document.querySelector('#sort [data-k="citations_since"]').textContent = `Citations since ${since}`;
+  const dates = S.map(s => s.scholar.as_of).sort(), same = dates[0] === dates[dates.length - 1];
+  document.getElementById("stats").innerHTML = `<div class="stat"><b>${S.length}</b><span>Scientists</span></div><div class="stat"><b>${n(S.reduce((a, s) => a + (s.scholar.citations || 0), 0))}</b><span>Combined citations</span></div><div class="stat"><b>${CL.fmtDate(dates[dates.length - 1])}</b><span>Figures last refreshed</span></div>`;
+  document.querySelector("#rank thead").innerHTML = `<tr><th>#</th><th>Scientist</th><th>Citations</th><th>Since ${since}</th><th>h-index</th><th>i10-index</th></tr>`;
+  function render() {
+    const rows = S.slice().sort((a, b) => (b.scholar[key] || 0) - (a.scholar[key] || 0));
+    document.querySelector("#rank tbody").innerHTML = rows.map((s, i) => { const g = s.scholar, url = "https://scholar.google.com/citations?hl=en&user=" + encodeURIComponent(s.scholar_id);
+      return `<tr id="${esc(s.id)}"><td class="n">${i + 1}</td><td class="who"><b>${esc(s.name)}</b><span class="aff">${esc(s.affiliation || "")}</span><p>${esc(s.blurb)}</p><span class="lk"><a href="${url}" target="_blank" rel="noopener">Google Scholar profile ↗</a>${s.website ? `<a href="${esc(s.website[1])}" target="_blank" rel="noopener">${esc(s.website[0])} ↗</a>` : ""}</span></td>
+        <td data-l="Citations" class="${key === "citations" ? "on" : ""}">${n(g.citations)}${same ? "" : `<small>${CL.fmtDate(g.as_of)}</small>`}</td><td data-l="Since ${since}" class="${key === "citations_since" ? "on" : ""}">${n(g.citations_since)}</td><td data-l="h-index" class="${key === "h_index" ? "on" : ""}">${n(g.h_index)}<small>${n(g.h_index_since)} since ${since}</small></td><td data-l="i10-index">${n(g.i10_index)}</td></tr>`; }).join("");
+  }
+  document.getElementById("sort").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; key = b.dataset.k; document.querySelectorAll("#sort button").forEach(x => x.classList.toggle("on", x === b)); render(); });
+  render();
+  document.getElementById("note").textContent = "Source: each scientist's public Google Scholar profile. The figures are refreshed automatically on the first of every month; a row shows its own date if its profile could not be read that month.";
+})().catch(e => { document.querySelector("#rank tbody").innerHTML = `<tr><td><div class="empty">Could not load (${CL.esc(e.message)}).</div></td></tr>`; });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviews and praise | The Psychopath Whisperer</title>
+<meta name="description" content="Reviews of The Psychopath Whisperer by Kent Kiehl, from scientists, reviewers and readers.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="The Psychopath Whisperer">
+<meta property="og:title" content="Reviews and praise | The Psychopath Whisperer">
+<meta property="og:description" content="Reviews of The Psychopath Whisperer by Kent Kiehl, from scientists, reviewers and readers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psychopathwhisperer.com/praise.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://psychopathwhisperer.com/praise.html">
+<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml"><link rel="alternate icon" href="assets/favicon-32.png?v=1" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<link rel="alternate" type="application/rss+xml" title="The Psychopath Whisperer: news" href="feed.xml">
+<style>
+  .sub { font-size: 1.4rem; margin: 2rem 0 .9rem; }
+  .quotes { columns: 2 340px; column-gap: 1rem; }
+  .quotes blockquote { break-inside: avoid; margin: 0 0 1rem; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1rem 1.2rem; font-family: var(--serif); font-size: 1.05rem; line-height: 1.5; }
+  .quotes cite { display: block; margin-top: .6rem; font: 600 .84rem var(--sans); color: var(--ink-2); font-style: normal; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head"><p class="eyebrow">The book</p><h1>Reviews and praise</h1><p>What scientists, reviewers and readers have said about <i>The Psychopath Whisperer</i>.</p></div>
+  <h2 class="sub">From scientists and experts</h2><div class="quotes" id="q-expert"><div class="spinner">Loading…</div></div>
+  <h2 class="sub">From reviewers</h2><div class="quotes" id="q-review"></div>
+  <h2 class="sub">From readers</h2><div class="quotes" id="q-reader"></div>
+  <p class="small muted" style="margin-top:1.5rem">Readers are identified by their initials. <a href="book.html">About the book</a></p>
+</main>
+<div id="site-footer"></div>
+<script src="assets/config.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+<script src="assets/layout.js?v=1"></script>
+<script>
+(async function () {
+  const esc = CL.esc, praise = await CL.getJSON("data/praise.json");
+  for (const k of ["expert", "review", "reader"]) document.getElementById("q-" + k).innerHTML = praise.filter(q => q.kind === k).map(q => `<blockquote>“${esc(q.quote)}”<cite>${esc(q.by)}</cite></blockquote>`).join("");
+})().catch(e => { document.getElementById("q-expert").innerHTML = `<div class="empty">Could not load (${CL.esc(e.message)}).</div>`; });
+</script>
+</body>
+</html>
