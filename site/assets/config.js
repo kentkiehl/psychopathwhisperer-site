@@ -3,5 +3,7 @@ window.SITE_CONFIG = {
   repo: "kentkiehl/psychopathwhisperer-site",
   siteUrl: "https://psychopathwhisperer.com",
   // Cloudflare Web Analytics token (cookie-free). Empty disables the beacon.
-  cfAnalyticsToken: ""
+  cfAnalyticsToken: "",
+  // GoatCounter site code (cookie-free visit counter; private dashboard at https://<code>.goatcounter.com). Empty disables it.
+  goatcounterCode: "psychopath"
 };

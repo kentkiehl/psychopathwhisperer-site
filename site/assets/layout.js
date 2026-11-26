@@ -45,4 +45,6 @@
   else { const io = new IntersectionObserver(entries => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }); }, { threshold: 0.12 }); rvs.forEach(el => io.observe(el)); }
 
   if (C.cfAnalyticsToken) { const s = document.createElement("script"); s.defer = true; s.src = "https://static.cloudflareinsights.com/beacon.min.js"; s.setAttribute("data-cf-beacon", JSON.stringify({ token: C.cfAnalyticsToken })); document.head.appendChild(s); }
+  // Private visit counter (GoatCounter, no cookies). Counts only on the live site, not previews or local copies.
+  if (C.goatcounterCode && /(^|\.)psychopathwhisperer\.com$/.test(location.hostname)) { const g = document.createElement("script"); g.async = true; g.src = "https://gc.zgo.at/count.js"; g.setAttribute("data-goatcounter", "https://" + C.goatcounterCode + ".goatcounter.com/count"); document.head.appendChild(g); }
 })();

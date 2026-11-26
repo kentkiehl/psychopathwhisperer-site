@@ -52,3 +52,6 @@ own styles are in `site/assets/site.css`.
 - `python3 -m pipeline.update_metrics --dry-run` to test the monthly refresh.
 - Site address lives in pipeline/config.py, site/assets/config.js and the page heads: change with `scripts/set_site_url.py`.
 - Bump `?v=` on app.css/site.css/app.js/layout.js when they change.
+- Visit counter (owner's request, 26 Nov 2026): GoatCounter, site code `psychopath` (`goatcounterCode` in
+  `site/assets/config.js`, loaded by `layout.js` only on the live domain). The owner's private dashboard is
+  psychopath.goatcounter.com; the lab site uses the separate code `kkiehl`.
